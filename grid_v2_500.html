@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflaer.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+
+    <style>
+
+    .grid {
+      width: 1140px; margin: 48px auto; padding: 2px 0 0 0;
+      color: #000; font-weight: bold;
+    }
+
+    .grid a {
+      display: block; position: relative;
+      color: inherit; padding: 4px;
+    }
+    
+    .cell { margin: 0; padding: 2px; }
+
+    .h800 > a { height: 804px; }
+    .h650 > a { height: 652px; }
+    .h500 > a { height: 500px; }
+    .h300 > a { height: 300px; }
+    .h150 > a { height: 148px; } /* 150px - 4px */
+
+    .cell.small-8.h500 > a, .small-8 > .cell.small-12.h500 > a { background-color: #3573e4; }
+    .cell.small-4.h800 > a, .small-4 > .cell.small-12.h800 > a { background-color: #393; }
+    .cell.small-4.h650 > a , .small-4 > .cell.small-12.h650 > a { background-color: #399; }
+    .cell.small-4.h300 > a, .small-8 > .cell.small-6.h300 > a { background-color: #e4a835; }
+    .cell.small-4.h150 > a, .small-4 > .cell.small-12.h150 > a { background-color: #801d55; }
+
+    </style>
+    <title>CFv31 : Grid</title>
+  </head>
+  <body>
+
+    <div class="grid grid-x">
+      <div class="small-8 grid-x">
+        <div class="small-12 h500 cell"><a href="javascript: void 0;">8/500</a></div>
+        <div class="small-6 h300 cell"><a href="javascript: void 0;">4/300</a></div>
+        <div class="small-6 h300 cell"><a href="javascript: void 0;">4/300</a></div>
+      </div>
+      <div class="small-4 grid-x">
+        <div class="small-12 h150 cell"><a href="javascript: void 0;">4/150</a></div>
+        <div class="small-12 h650 cell"><a href="javascript: void 0;">4/650</a></div>
+      </div>
+      <div class="small-4 h300 cell"><a href="javascript: void 0;">4/300</a></div>
+      <div class="small-4 h300 cell"><a href="javascript: void 0;">4/300</a></div>
+      <div class="small-4 grid-x">
+        <div class="small-12 h150 cell"><a href="javascript: void 0;">4/150</a></div>
+        <div class="small-12 h150 cell"><a href="javascript: void 0;">4/150</a></div>
+      </div>
+    </div>
+  </body>
+</html>

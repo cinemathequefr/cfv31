@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.1/css/foundation.min.css">
+    <link rel="stylesheet" href="css/perfect-scrollbar.min.css">
+    
+    <!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    -->
+   
+
+    <script src="js/perfect-scrollbar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
+    <script>WebFont.load({google:{families:["Source+Sans+Pro:400,400italic,600,600italic", "Quicksand:300,700"]}});</script>
+    <style>
+
+    body {
+      font-family: Source Sans Pro;
+      color: #222;
+    }
+
+
+    .grid-container {
+      margin-top: 48px; margin-bottom: 128px;
+      max-width: 1140px;
+    }
+
+    .cell {
+      overflow: hidden; position: relative;
+      color: #fff;
+      outline: solid 3px #fff;
+      background-repeat: no-repeat; background-size: cover; background-position: 50% 50%;
+    }
+
+    .cell.high {
+      height: 400px;
+    }
+
+    .cell h1 {
+      position: absolute; display: block; background-color: rgba(0, 0, 0, 0.5);
+      bottom: 0; left: 0; right: 0;
+      margin: 0; padding: 8px 0 8px 4px;
+      font-family: Quicksand; text-transform: uppercase; font-weight: 600;
+      font-size: 1.25rem; line-height: 1.25rem;
+    }
+
+    .cell h1 .dates { text-transform: none; }
+
+    .cell.c1 h1 { font-size: 2rem; line-height: 2rem; }
+    .cell.c1 h1 .dates { font-size: 1rem; }
+    .cell.c2 h1 { font-size: 1.25rem; line-height: 1.25rem; }
+    .cell.c2 h1 .dates { font-size: 0.875rem; }
+    .cell.c3 h1 { font-size: 1.125rem; line-height: 1.125rem; }
+    .cell.c3 h1 .dates { font-size: 0.75rem; }
+
+    h1 .sup { font-weight: 300; }
+
+    .cell.calendar-wrapper {
+      position: relative;
+      background-color: #eee; color: #222;
+      text-align: center;
+    }
+
+    .calendar-wrapper .date {
+      padding: 4px 0;
+      color: #bf7f30;
+      font-family: Quicksand; font-weight: 700; font-size: 1rem;
+      text-transform: uppercase; text-align: center;
+    }
+
+    .calendar-container {
+      position: absolute; overflow: auto;
+      top: 36px; bottom: 8px;
+      width: 100%; padding: 2px 4px;
+      text-align: left;
+      font-size: 0.875rem;
+      box-sizing: border-box;
+    }
+
+    .calendar { padding: 0 12px 0 4px; }
+
+    .calendar a {
+      display: block;
+      color: #222;
+      text-decoration: none;
+    }
+
+    .calendar a .time {
+      display: block;
+      width: 60px;
+    }
+
+    .calendar a .time + span {
+      display: block;
+      float: right;
+    }
+
+    .c1 { background-color: #396; }
+    .c2 { background-color: #369; }
+    .c3 { background-color: #639; }
+    .c4 { background-color: #e5dbcf; }
+
+
+    </style>
+    <title></title>
+  </head>
+  <body>
+
+    <div class="grid-container">
+      25 avril 2017
+      <div class="grid-x">
+        <div class="small-12 medium-8 cell grid-x" style="height:700px">
+          <div class="small-12 cell c1" style="height: 400px; background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/antichrist-lars-von-trier/s,1600-69fe5e.jpg)"><h1>Festival de Cannes&nbsp;:<br>Scandales et controverses<div class="dates">26 avril-28 mai 2017 </div></h1></div>
+          <div class="small-12 medium-6 cell c2" style="height: 300px; background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/alain-jessua-bandeau-cycle/s,1600-8aa365.jpg)"><h1>Alain Jessua<div class="dates">19-29 avril 2017</div></h1></div>
+          <div class="small-12 medium-6 cell c2" style="height: 300px; background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/jacques-becker/s,1600-ba3092.jpg)"><h1>Jacques Becker<div class="dates">5-29 avril 2017</div></h1></div>
+        </div>
+        <div class="small-12 medium-4 cell grid-x">
+          <div class="small-12 cell c2" style="height: 200px; background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/momes-cie-kirikou-et-la-sorciere/s,1600-d9f703.jpg)"><h1><div class="sup">Exposition &amp; films</div>Mômes &amp; Cie<div class="dates">29 mars-30 juillet 2017</div></h1></div>
+          <div class="small-12 cell calendar-wrapper" style="height: 500px;">
+            <div class="date">Mercredi 26 avril 2017</div>
+            <div class="calendar-container">
+              <div class="calendar" style="min-height: 800px;">
+
+                <a href="javascript: void 0;"><span class="time">10h00-19h00</span> <span>La Bibliothèque du film</span></a>
+                <a href="javascript: void 0;"><span class="time">12h00-19h00</span> <span>Musée de la Cinémathèque</span></a>
+                <a href="javascript: void 0;"><span class="time">12h00-19h00</span> <span>Musée de la Cinémathèque&nbsp;: exposition L'Écran japonais</span></a>
+                <a href="javascript: void 0;"><span class="time">12h00-19h00</span> <span>Exposition Mômes &amp; Cie</span></a>
+
+
+
+<!--
+<div>
+  <div>
+    <a href="seance/26267.html" class="show"><div class="show-content"><div><span class="time">14h30</span><span class="salle">GF</span></div><div class="cycle"> Alain Jessua</div> <ul class="group"><li class="film"><span class="title">Armaguedon</span> Alain Jessua </li> </ul></div> </a> <a href="seance/26219.html" class="show"><div class="show-content"> <div><span class="time">15h00</span><span class="salle">HL</span></div><div class="cycle"> Jeune public</div> <ul class="group"><li class="film"><span class="title">Le Balayeur</span> Serge Elissalde <span class="film-cm tooltipable" title="Court métrage">CM</span><span class="film-age bubble age-6 tooltipable" title="À partir de 6 ans">6</span> </li><li class="film"><span class="title">La Récréation</span> Abbas Kiarostami <span class="film-cm tooltipable" title="Court métrage">CM</span><span class="film-age bubble age-6 tooltipable" title="À partir de 6 ans">6</span> </li><li class="film"><span class="title">Le Ballon rouge</span> Albert Lamorisse <span class="film-cm tooltipable" title="Court métrage">CM</span><span class="film-age bubble age-6 tooltipable" title="À partir de 6 ans">6</span> </li><li class="film"><span class="title">Balloonland</span> Ub Iwerks <span class="film-cm tooltipable" title="Court métrage">CM</span><span class="film-age bubble age-6 tooltipable" title="À partir de 6 ans">6</span> </li> </ul></div> </a> <a href="seance/26266.html" class="show"><div class="show-content"> <div><span class="time">17h00</span><span class="salle">GF</span></div><div class="cycle"> Alain Jessua</div> <ul class="group"><li class="film"><span class="title">Les Chiens</span> Alain Jessua </li> </ul></div> </a> <a href="seance/26745.html" class="show"><div class="show-content"> <div><span class="time">19h00</span><span class="salle">LI</span></div><div class="cycle"> Festival de Cannes&nbsp;: scandales et controverses</div> <ul class="group"><li class="film"><span class="title">Signature de «&nbsp;Sélection officielle&nbsp;» (Grasset) par Thierry Frémaux</span> </li> </ul></div> </a> <a href="seance/26275.html" class="show"><div class="show-content"> <div><span class="time">19h30</span><span class="salle">JE</span></div><div class="cycle"> Alain Jessua</div> <ul class="group"><li class="film"><span class="title">Léon la Lune</span> Alain Jessua <span class="film-cm tooltipable" title="Court métrage">CM</span> </li><li class="film"><span class="title">Jeu de massacre</span> Alain Jessua </li> </ul></div> </a> <a href="seance/26433.html" class="show"><div class="show-content"> <div><span class="time">19h30</span><span class="salle">GF</span></div><div class="cycle"> Jacques Becker</div> <ul class="group"><li class="film"><span class="title">Rue de l'Estrapade</span> Jacques Becker </li> </ul></div> </a> <a href="seance/26307.html" class="show"><div class="show-content"> <div><span class="time">20h00</span><span class="salle">HL</span></div><div class="cycle"> Festival de Cannes&nbsp;: scandales et controverses</div><div class="rem">Ouverture de la rétrospective&nbsp;–&nbsp;Précédée à 19h de la signature de «&nbsp;Sélection officielle&nbsp;» (Grasset) par Thierry Frémaux</div> <ul class="group"><li class="film"><span class="title">La Grande bouffe</span> Marco Ferreri </li> </ul></div> </a> <a href="seance/26413.html" class="show"><div class="show-content"> <div><span class="time">21h30</span><span class="salle">GF</span></div><div class="cycle"> Jacques Becker</div> <ul class="group"><li class="film"><span class="title">Les Aventures d'Arsène Lupin</span> Jacques Becker</li></ul></div></a></div>
+-->
+
+
+
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="small-12 medium-3 cell c2" style="height: 300px; background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/lemigrant-charles-chaplin/s,1600-213e37.jpg)"><h1>L'année 1917<div class="dates">30 novembre 2016-30 avril 2017</div></h1></div>
+        <div class="small-12 medium-5 cell c2" style="height: 300px; background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/jean-eustache-la-maman-et-la-putain/s,1600-169690.jpg)"><h1>Jean Eustache<div class="dates">3-27 mai 2017</div></h1></div>
+        <div class="small-12 medium-4 cell grid-y">
+          <div class="small-6 cell c3" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/lecran-japonais-2/s,1600-60cfd1.jpg)"><h1><div class="sup">Exposition &amp; films</div>L'Écran japonais<div class="dates">14 septembre 2016-25 juin 2017</div></h1></div>
+          <div class="small-6 cell c3"><h1><div class="sup">Jeune public</div>D'Antoine à Zazie<div class="dates">26 avril 2017</div></h1></div>
+        </div>
+        <div class="small-12 medium-4 cell c2" style="height: 300px; background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/marlen-khoutsiev-spring-on-zarechnaya-street/s,1600-ae1ff5.jpg)"><h1>Marlen Khoutsiev<div class="dates">10-28 mai 2017</div></h1></div>
+        <div class="small-12 medium-8 cell c4" style="height: 300px;"></div>
+        <div class="small-12 medium-5 cell c2" style="height: 300px; background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/revisons-nos-classiques/s,1600-40d8a1.jpg)"><h1>Révisons nos classiques<div class="dates">31 mai-29 juillet 2017</div></h1></div>
+        <div class="small-12 medium-3 cell c2" style="height: 300px; background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/vincent-lindon/s,1600-5ca2e5.jpg)"><h1>7 jours avec Vincent Lindon<div class="dates">31 mai-7 juin 2017</div></h1></div>
+        <div class="small-12 medium-4 cell grid-y">
+          <div class="small-6 cell c3"><h1><div class="sup">Cinéma bis</div>Préhistoire<div class="dates">28 avril 2017</div></h1></div>
+          <div class="small-6 cell c3"><h1><div class="sup">Conservatoire des techniques</div>Alexeïeff/Parker, montreurs d'ombres<div class="dates">12 mai 2017</div></h1></div>
+        </div>
+        <div class="small-12 medium-4 cell c2" style="height: 300px; background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/56e-semaine-de-la-critique-brigsby-bear/s,1600-bf6eb0.jpg)"><h1>56ème Semaine de la critique<div class="dates">7-14 juin 2017</div></h1></div>
+        <div class="small-12 medium-4 cell c2" style="height: 300px; background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/paris-beguin-genina/s,1600-da4372.jpg)"><h1>Cinéma français des années 1930<div class="dates">7-29 juin 2017</div></h1></div>
+        <div class="small-12 medium-4 cell grid-y">
+          <div class="small-6 cell c3"><h1><div class="sup">Aujourd'hui le cinéma</div>Rachel Lang<div class="dates">15 mai 2017</div></h1></div>
+          <div class="small-6 cell c3"><h1><div class="sup">Ciné-club Jean Douchet</div>Qu'est-ce qu'un cinéaste ?<div class="dates">17 mai 2017</div></h1></div>
+        </div>
+        <div class="small-12 medium-3 cell c2" style="height: 300px; background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/cycle-mauritz-stiller/s,1600-13a62f.jpg)"><h1>Mauritz Stiller<div class="dates">14 juin-5 juillet 2017</div></h1></div>
+        <div class="small-12 medium-5 cell c2" style="height: 300px; background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/andrei-tarkovski-bandeau/s,1600-2bf0e1.jpg)"><h1>Andreï Tarkovski<div class="dates">28 juin-12 juillet 2017</div></h1></div>
+        <div class="small-12 medium-4 cell grid-y">
+          <div class="small-6 cell c3"><h1><div class="sup">Cinéma d'avant-garde</div>Marco'O l'inespéré<div class="dates">19 mai 2017</div></h1></div>
+          <div class="small-6 cell c3"><h1><div class="sup">Séances spéciales</div>La Nuit des musées<div class="dates">20 mai 2017</div></h1></div>
+        </div>
+        <div class="small-12 medium-4 cell c2" style="height: 300px; background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/good-cop-bad-cop-3/s,1600-fe0f6d.jpg)"><h1>Good Cop, Bad Cop<div class="dates">5-30 juillet 2017</div></h1></div>
+        <div class="small-12 medium-4 cell c2" style="height: 300px; background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/titanic-1800/s,1600-29075c.jpg)"><h1>Plein les yeux ! Cinéma et grand spectacle<div class="dates">10-30 juillet 2017</div></h1></div>
+        <div class="small-12 medium-4 cell grid-y">
+          <div class="small-6 cell c3"><h1><div class="sup">Fenêtre sur les collections</div>Aux origines du western<div class="dates">12 juin 2017</div></h1></div>
+          <div class="small-6 cell c3"><h1>L'Autre ciné-club<div class="dates">23 juin 2017</div></h1></div>
+        </div>
+        <div class="small-12 medium-5 cell c2" style="height: 300px; background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/vittorio-cottafavi-fille-damour/s,1600-dac15a.jpg)"><h1>Vittorio Cottafavi<div class="dates">12-30 juillet 2017</div></h1></div>
+        <div class="small-12 medium-3 cell c3"><h1><div class="sup">Séances spéciales</div>La Nuit des musées<div class="dates">20 mai 2017</div></h1></div>
+        <div class="small-12 medium-4 cell grid-y">
+          <div class="small-6 cell c3"><h1><div class="sup">Fenêtre sur les collections</div>Aux origines du western<div class="dates">12 juin 2017</div></h1></div>
+          <div class="small-6 cell c3"><h1><div class="sup">Parlons cinéma</div>Tanguy Viel<div class="dates">22 juin 2017</div></h1></div>
+        </div>
+
+      </div>
+    </div>
+    <script>
+    var el = document.querySelector(".calendar-container");
+    Ps.initialize(el);
+
+
+    </script>
+  </body>
+</html>

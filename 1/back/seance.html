@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic|Inconsolata:400">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="../css/back.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/3.2.0/riot+compiler.min.js"></script>
+    <script src="../js/switch.tag.js" type="riot/tag"></script>
+    <script>riot.mount("*");</script>
+
+    <script src="../js/back.js"></script>
+
+    <title>CFv31 Back CRUD Séance</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="javascript:void(0);">
+        <h1>Séance <a href="javascript: void 0;">#29304</a></h1>
+
+        <switch></switch>
+
+        <fieldset>
+          <div class="ctrl w2"><label for="date">Date*</label><input type="text" id="date" placeholder="aaaa-mm-jj" data-date="2017-05-20" value="Sa 20 mai 2017"></div>
+          <div class="ctrl w1"><label for="date">Heure*</label><input type="text" id="heure" placeholder="hh:mm" value="17:30"></div>
+          <div class="ctrl">
+            <label for="date">Salle*</label>
+            <select id="salle">
+              <optgroup>
+                <option id="1" selected>HL - Salle Henri Langlois</option>
+                <option id="2">GF - Salle Georges Franju</option>
+                <option id="3">JE - Salle Jean Epstein</option>
+              </optgroup>
+              <optgroup>
+                <option id="4">LE - Salle Lotte Eisner</option>
+                <option id="5">LI - Librairie de la Cinémathèque</option>
+                <option id="6">RE - Restaurant les 400 coups</option>
+                <option id="7">JB - Jardins de Bercy</option>
+                <option id="8">ME - Cinéma Le Méliès</option>
+                <option id="9">RM - Cinéma Reflet Médicis</option>
+                <option id="10">FP - Fondation Jérôme Seydoux Pathé</option>
+                <option id="11">FI - La Filmothèque du Quartier latin</option>
+                <option id="12">FA - Cinéma Les Fauvettes  </option>
+                <option id="13">CH - Cinéma Christine 21</option>
+                <option id="14">EX - Exposition</option>                
+              </optgroup>
+            </select>
+          </div>
+          <div class="ctrl clear">
+            <label for="cycle">Cycles</label>
+            
+            <div class="tag close">John Ford</div>
+            <div class="tag close">(Jeune public) Les Géant de l'Ouest</div>
+            
+            <!--
+            <div class="tag">John Ford<div class="close">x</div></div>
+            <div class="tag">(Jeune public) Les Géant de l'Ouest<div class="close">x</div></div>
+            -->
+            <div class="tag add"></div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="ctrl w12"><label for="titre">Titre</label><input id="titre" type="text" value="Programme de courts métrages"></div>
+          <div class="ctrl clear w12"><label for="description">Description </label><textarea id="description" rows="4"></textarea></div>
+          <div class="ctrl w6"><label for="remarque1">Remarque 1 (info)</label><input class="remarque" id="remarque1" type="text"></div>
+          <div class="ctrl w6"><label for="remarque1">Remarque 2 (alerte)</label><input class="remarque" id="remarque2" type="text"></div>
+          <div class="ctrl w12"><label for="digitick">URL Digitick</label><input id="digitick" type="text" placeholder="http://billetterie.cinematheque.fr/"></div>
+          <div class="ctrl"><input id="mise_en_avant" type="checkbox"><label for="mise_en_avant">Mise en avant sur la page cycle</label></div>
+
+        </fieldset>
+        <fieldset>
+          <!-- <h2>Composition de la séance</h2> -->
+
+
+            <div class="ctrl w5"><label>Film / Intervention</label><span class="tag film">68303 - The Last Outlaw (Jack Ford, 1919)</span></div>
+            <div class="ctrl w1"><label for="format">Format</label><input class="format" type="text" value="35 mm"></div>
+            <div class="ctrl w1"><label for="version">Version</label><input class="version" type="text" value="INT. FR."></div>
+            <div class="ctrl w1"><label for="duree">Durée</label><input class="duree" type="text" value="13"></div>
+            <div class="ctrl w3"><label for="remarque">Remarque</label><input class="remarque" type="text" value="Copie en mauvais état"></div>
+            <div class="ctrl w1"><label for="remarque">Sous-cycles</label><span></span></div>
+
+            <div class="ctrl w5 clear"><span class="tag film">68307 - Tête brûlée (Jack Ford, 1919)</span></div>
+            <div class="ctrl w1"><input class="format" type="text" value="35 mm"></div>
+            <div class="ctrl w1"><input class="version" type="text" value="INT. FR."></div>
+            <div class="ctrl w1"><input class="duree" type="text" value="28"></div>
+            <div class="ctrl w3"><input class="remarque" type="text"></div>
+            <div class="ctrl w1"><span></span></div>
+
+            <div class="ctrl w5 clear"><span class="tag pseudo film">No PK - Les Éperons d'argent (Sean O'Hara, 1919)</span></div>
+            <div class="ctrl w1"><input class="format" type="text" value="16 mm"></div>
+            <div class="ctrl w1"><input class="version" type="text" value=""></div>
+            <div class="ctrl w1"><input class="duree" type="text" value="4"></div>
+            <div class="ctrl w3"><input class="remarque" type="text" value="Film incomplet"></div>
+            <div class="ctrl w1"><span></span></div>
+
+            <div class="ctrl w5 clear"><span class="tag intervention">Quand Ford s'appelait Jack. Conférence de Bernard Benoliel</span></div>
+            <div class="ctrl w1"></div>
+            <div class="ctrl w1"></div>
+            <div class="ctrl w1"><input class="duree" type="text" value=""></div>
+            <div class="ctrl w3"><input class="remarque" type="text"></div>
+            <div class="ctrl w1"><span></span></div>
+
+
+            <button class="small left">Créer une nouvelle séance en dupliquant ce contenu</button>
+
+
+        </fieldset>
+        <fieldset style="height: 10vh;"></fieldset>
+
+        <fieldset class="info">
+
+          <label for="">Séances identiques</label>
+
+          <div class="seances-similaires">
+            <div>Ve 17 fév 2017 - 19h00 - Salle GF</div>
+            <div>Sa 21 avr 2017 - 15h00 - Salle JE</div>
+            
+          </div>
+
+
+
+        </fieldset>
+
+        <div style="overflow: hidden;">
+          <button id="enregistrer">Valider</button>
+          <button id="fermer">Fermer</button>
+          <button id="supprimer">Supprimer</button>
+        </div>
+      </form>
+
+
+
+
+
+    </div>
+  </body>
+</html>
+
+
+
+
