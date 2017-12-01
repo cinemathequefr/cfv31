@@ -1,0 +1,3 @@
+<app>
+  <menubar></menubar>
+</app>
