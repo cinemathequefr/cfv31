@@ -2849,7 +2849,7 @@ var riot$1 = extend({}, core, {
   util: util,
 });
 
-riot$1.tag2('app', '<menubar></menubar>', '', '', function(opts) {
+riot$1.tag2('app', '<menubar></menubar> <p>Test</p>', '', '', function(opts) {
 });
 
 var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
