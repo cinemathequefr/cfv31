@@ -3,6 +3,9 @@
   <div class="menu-wrapper">
     <div class="menu-container">
       <a class="logocf" href="javascript: void 0;">La Cinémathèque française</a>
+      <form class="menu-search { focus: searchHasFocus }" onsubmit={ searchSubmit }>
+        <input class="search-input" type="text" onblur={ searchSetBlur } onfocus={ searchSetFocus }><input class="search-submit" type="submit">
+      </form>
       <div class="menu-top">
         <a href="javascript: void 0;" each={ item in items.top } onclick={ select } class={ selected: isSelectedItem(item) }>{ item.title }</a>
       </div>
@@ -16,6 +19,7 @@
   <script>
   var tag = this;
   tag.selectedItem = null;
+  tag.searchHasFocus = false;
 
   tag.items = _({
     top: [
@@ -29,7 +33,7 @@
       { title: "Exposition" },
       { title: "Musée" },
       { title: "Bibliothèque" },
-      { title: "Le Mag" },
+      { title: "Découvrir" },
       { title: "Infos pratiques" },
       { title: "Calendrier" },
     ]
@@ -50,12 +54,32 @@
     tag.selectedItem = e.item.item.id;
     return true;
   }
+
+  tag.searchSubmit = function (e) {
+    tag.searchSetFocus();
+    e.preventDefault();
+    console.log("Submit");
+  }
+
+  tag.searchSetFocus = function (e) {
+    tag.searchHasFocus = true;
+  }
+
+  tag.searchSetBlur = function (e) {
+    tag.searchHasFocus = false;
+  }
+
+
   </script>
 
   <style>
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+    input {
+      vertical-align: middle;
     }
 
     .menu-wrapper {
@@ -69,6 +93,43 @@
       width: 1140px; height: 200px; margin: 0 auto;
       font-family: Quicksand; font-weight: 700; font-size: 14px; text-transform: uppercase;
     }
+
+    .menu-search {
+      position: absolute;
+      right: 4px; top: 4px;/* height: 32px;*/
+    }
+
+    .menu-search .search-input {
+      display: inline-block;
+      width: 300px; height: 20px; line-height: 20px;
+      margin: 0; border: 0; padding: 8px;
+      background-color: #555; color: #999;
+      font-size: 1rem; font-weight: 600;
+      transition: 0.15s;
+    }
+
+    .menu-search.focus .search-input {
+      background-color: #eee; color: #111;
+    }
+
+    .menu-search .search-submit {
+      display: inline-block; line-height: 20px;
+      width: 36px; height: 36px;
+      margin: 0; padding: 0; border: 0;
+      background: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjQ4IiBoZWlnaHQ9IjQ4IiB2aWV3Qm94PSIwIDAgNDggNDgiPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0yOS41NCAyMy44OWMwLTEuNTYtMC41Ni0yLjg5LTEuNjYtMy45OXMtMi40NC0xLjY2LTMuOTktMS42NiAtMi44OSAwLjU1LTMuOTkgMS42NiAtMS42NiAyLjQ0LTEuNjYgNCAwLjU1IDIuODkgMS42NiAzLjk5YzEuMTEgMS4xMSAyLjQ0IDEuNjYgNCAxLjY2czIuODktMC41NiAzLjk5LTEuNjZDMjguOTggMjYuNzcgMjkuNTQgMjUuNDQgMjkuNTQgMjMuODl6TTM2IDM0LjM5YzAgMC40NC0wLjE2IDAuODItMC40OCAxLjE0QzM1LjIgMzUuODQgMzQuODIgMzYgMzQuMzkgMzZjLTAuNDUgMC0wLjgzLTAuMTYtMS4xMy0wLjQ4bC00LjMzLTQuMzFjLTEuNTEgMS4wNC0zLjE4IDEuNTYtNS4wMyAxLjU2IC0xLjIgMC0yLjM1LTAuMjMtMy40NS0wLjcgLTEuMS0wLjQ3LTIuMDQtMS4xLTIuODQtMS44OSAtMC43OS0wLjc5LTEuNDMtMS43NC0xLjg5LTIuODRDMTUuMjMgMjYuMjQgMTUgMjUuMDkgMTUgMjMuODlzMC4yMy0yLjM1IDAuNy0zLjQ1YzAuNDctMS4xIDEuMS0yLjA0IDEuODktMi44NCAwLjgtMC43OSAxLjc0LTEuNDMgMi44NC0xLjg5QzIxLjUzIDE1LjIzIDIyLjY4IDE1IDIzLjg5IDE1czIuMzUgMC4yMyAzLjQ1IDAuN2MxLjEgMC40NyAyLjA1IDEuMSAyLjg0IDEuODkgMC44IDAuOCAxLjQzIDEuNzQgMS44OSAyLjg0IDAuNDcgMS4xIDAuNyAyLjI1IDAuNyAzLjQ1IDAgMS44NS0wLjUyIDMuNTMtMS41NiA1LjA0bDQuMzMgNC4zM0MzNS44NCAzMy41NiAzNiAzMy45NCAzNiAzNC4zOXoiLz48L3N2Zz4=") no-repeat;
+      background-size: contain; background-color: #4d4d4d;
+      background-position: 50% 50%;
+      font-size: 0;
+      cursor: pointer;
+      transition: 0.15s;
+    }
+
+    .menu-search.focus .search-submit {
+      background-color: #bf7f30;
+    }
+
+
+
 
     .menu-top {
       position: absolute; overflow: hidden;
