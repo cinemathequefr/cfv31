@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflaer.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+    <link rel="alternate" type="application/rss+xml" title="Découvrir" href="http://www.cinematheque.fr/decouvrir-rss.html" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
+    <script>WebFont.load({google:{families:["Quicksand:300,700", "Source+Sans+Pro:400,400italic,600,600italic"]}});</script>
+    <style>
+    body {
+      font-family: Source Sans Pro;
+      font-size: 16px;
+    }
+
+    .grid {
+      width: 1140px; margin: 48px auto; padding: 2px 0 0 0;
+    }
+
+    .grid a {
+      display: block; position: relative;
+      background-color: rgba(12, 13, 26, 1);
+      /*background-color: #111;*/
+      color: inherit;
+    }
+
+    .grid .cell.h200 a { background-color: #666; }
+    .grid .cell.h700 a { background-color: #666; }
+
+    .grid a > .bg {
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0; /* Ici, on peut modifier bottom pour réduire la hauteur de l'image de fond (eg 50%) */
+      background-size: cover; background-position: 50% 50%;
+    }
+
+    .grid a > .bg > .mask {
+      position: absolute;
+      top: 0; right: 0; bottom: 0px; left: 0;
+    }
+
+    .grid a > .bg > .mask.shaded {
+      background: linear-gradient(to top, rgba(12, 13, 26, 1) 0%, rgba(12, 13, 26, 0.8) 15%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .grid a > .masktop {
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      transition: 0.2s;
+      opacity: 0;
+    }    
+
+    .grid a:hover > .masktop {
+      opacity: .75;
+    }
+
+    .text {
+      position: absolute;
+      bottom: 12px; left: 12px;
+      width: 90%;
+      color: #fff;
+    }
+    
+    .cell { margin: 0; padding: 4px; background-color: #fff; text-align: left;}
+    .h700 > a { height: 702px; }
+    .h500 > a { height: 500px; }
+    .h400 > a { height: 400px; }
+    .h200 > a { height: 198px; } /* 150px - 4px */
+
+    .h400 > a > .bg { bottom: 100px; }
+
+
+    .cell h1 {
+      margin: 0; padding: 0;
+      font-family: Quicksand; font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .cell h1 > .small { font-weight: 300; }
+
+    .cell.h500 h1 { font-size: 2.25rem; line-height: 1.75rem; }
+    .cell.h500 h1 > .small { font-size: 1.75rem; line-height: 1.75rem; }
+    .cell.h500 .type, .cell.h500 .dates { line-height: 1.75rem; }
+
+
+    .cell.h400 h1 { font-size: 1.75rem; line-height: 1.5rem; }
+    .cell.h400 h1 > .small { font-size: 1.5rem; line-height: 1.5rem; }
+    .cell.h400 .type, .cell.h400 .dates { line-height: 1.5rem; }
+
+
+
+    .text .type {
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .text .dates { font-size: 1rem; }
+
+
+    </style>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/moment.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
+    <script>WebFont.load({google:{families:["Source+Sans+Pro:400,400italic,600,600italic"]}});</script> 
+  </head>
+  <body>
+  
+    <div class="grid grid-x">
+      <div class="small-8 grid-x">
+        <div class="small-12 h500 cell">
+          <a href="javascript: void 0;">
+            <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/clouzot-1800/s,1600-00c04b.jpg);">
+              <div class="mask shaded"></div>
+            </div>
+            <div class="masktop" style="background-color: #1e2f82;"></div>
+            <div class="text">
+              <div class="type">Films + galerie</div>
+              <h1>Le Mystère Clouzot<br><span class="small">Un chercheur d'absolu</span></h1>
+              <div class="dates">Du 8 novembre 2017 au 29 juillet 2018</div>
+            </div>
+          </a>
+        </div>
+        <div class="small-6 h400 cell">
+          <a href="javascript: void 0;">
+            <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/american-fringe-2-donald-cried/s,1600-ba14e4.jpg);">
+              <div class="mask shaded"></div>
+            </div>
+            <div class="masktop" style="background-color: #3989a6;"></div>
+            <div class="text">
+              <h1>American Fringe, saison 2<br><span class="small">Un autre cinéma indépendant américain</span></h1>
+              <div class="dates">Du 17 au 19 novembre 2017</div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="small-6 h400 cell">
+          <a href="javascript: void 0;">
+            <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/films/jean-rouch-cine-portrait-de-raymond-depardon-par-jean-rouch/s,1600-64efb4.jpg);">
+              <div class="mask shaded"></div>
+            </div>
+            <div class="masktop" style="background-color: #272170;"></div>
+            <div class="text">
+              <h1>Jean Rouch<br><span class="small">Restaurations, raretés et inachevés</span></h1>
+              <div class="dates">Du 22 au 27 novembre 2017</div>
+            </div>
+          </a>
+        </div>
+        
+
+      </div>
+      
+      <div class="small-4 grid-x">
+        <div class="small-12 h200 cell"><a href="javascript: void 0;"><div class="mask"></div><div class="masktop"></div><div class="text"></div></a></div>
+        <div class="small-12 h700 cell"><a href="javascript: void 0;"><div class="mask"></div><div class="masktop"></div><div class="text"></div></a></div>
+      </div>
+      <div class="small-4 h400 cell">
+        <a href="javascript: void 0;">
+          <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/roman-polanski-le-locataire/s,1600-51c66b.jpg);">
+            <div class="mask shaded"></div>
+          </div>
+          <div class="masktop" style="background-color: #4b7365;"></div>
+          <div class="text">
+              <h1>Roman Polanski<br><span class="small">Le corps ne répond plus</span></h1>
+              <div class="dates">Du 30 octobre au 25 novembre 2017</div>
+          </div>
+        </a>
+      </div>
+      <div class="small-4 h400 cell">
+        <a href="javascript: void 0;">
+          <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/colombie/s,1600-d8e355.jpg);">
+            <div class="mask shaded"></div>
+          </div>
+          <div class="masktop" style="background-color: #7f7b28;"></div>
+          <div class="text">
+              <h1>Le cinéma colombien<br><span class="small">Hier, aujourd'hui, demain</span></h1>
+              <div class="dates">Du 30 novembre au 10 cédembre 2017</div>
+          </div>
+        </a>
+      </div>
+
+
+      <!-- <div class="small-4 h400 cell"><a href="javascript: void 0;"><div class="mask"></div><div class="masktop"></div><div class="text"></div></a></div> -->
+      <div class="small-4 grid-x">
+        <div class="small-12 h200 cell"><a href="javascript: void 0;"><div class="mask"></div><div class="masktop"></div><div class="text"></div></a></div>
+        <div class="small-12 h200 cell"><a href="javascript: void 0;"><div class="mask"></div><div class="masktop"></div><div class="text"></div></a></div>
+      </div>
+      
+    </div>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/3.7.4/riot+compiler.min.js"></script> -->
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflaer.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+    <style>
+    .grid {
+      width: 1140px; margin: 48px auto; padding: 0;
+      color: #000; font-weight: bold;
+    }
+
+    .grid a {
+      display: block; position: relative;
+      color: inherit; padding: 4px;
+    }
+    
+    .cell { margin: 0; padding: 3px; }
+
+    .h557 > a { height: 557px; background-color: #3573e4; }
+    .h416 > a { height: 416px; background-color: #e4a835; }
+    .h275 > a { height: 275px; background-color: #399; }
+    .h276 > a { height: 276px; background-color: #801d55; }
+    .h135 > a { height: 135px; background-color: #393; }
+    .small-12.grid-x > .h135 > a { height: 135px; background-color: #666; }
+
+    .hidden, .hidden > a {
+      background-color: transparent; color: transparent;
+    }
+
+    .hatch {
+      background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCA0IDQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIj48cGF0aCBkPSJNLTEgMWwyLTJNMCA0bDQtNE0zIDVsMi0yIiBzdHlsZT0ic3Ryb2tlLXdpZHRoOjE7c3Ryb2tlOnJnYmEoMCwgMCwgMCwgLjI1KSIvPjwvc3ZnPg==");
+      background-repeat: repeat;
+    }
+    </style>
+    <title>CFv31 : Grid</title>
+  </head>
+  <body>
+    <div class="grid grid-x">
+
+      <div class="small-12 grid-x">
+        <div class="small-8 h557 cell"><a href="javascript: void 0;">8/557</a></div>
+        <div class="small-4 grid-x">
+          <div class="small-12 h416 cell"><a class="hatch" href="javascript: void 0;">4/416 (épinglé)</a></div>
+          <div class="small-12 h135 cell"><a href="javascript: void 0;">4/135</a></div>
+        </div>
+      </div>
+
+      <div class="small-12 grid-x">
+        <div class="small-4 h416 cell"><a href="javascript: void 0;">276</a></div>
+        <div class="small-4 h416 cell"><a href="javascript: void 0;">276</a></div>
+        <div class="small-4 grid-x">
+          <div class="small-12 h135 cell"><a href="javascript: void 0;">4/135</a></div>
+          <div class="small-12 h135 cell"><a href="javascript: void 0;">4/135</a></div>
+          <div class="small-12 h135 cell"><a href="javascript: void 0;">4/135</a></div>
+        </div>
+      </div>
+
+      <div class="small-12 grid-x">
+        <div class="small-4 h416 cell"><a href="javascript: void 0;">416</a></div>
+        <div class="small-4 h416 cell"><a href="javascript: void 0;">416</a></div>
+        <div class="small-4 grid-x">
+          <div class="small-12 h135 cell"><a href="javascript: void 0;">4/135</a></div>
+          <div class="small-12 h135 cell"><a href="javascript: void 0;">4/135</a></div>
+          <div class="small-12 h135 cell"><a href="javascript: void 0;">4/135</a></div>
+        </div>
+      </div>
+
+      <div class="small-12 grid-x">
+        <div class="small-8 grid-x">
+          <div class="small-4 h276 cell"><a href="javascript: void 0;">2.67/276</a></div>
+          <div class="small-4 h276 cell"><a href="javascript: void 0;">2.67/276</a></div>
+          <div class="small-4 h276 cell"><a href="javascript: void 0;">2.67/276</a></div>
+        </div>
+        <div class="small-4 grid-x">
+          <div class="small-12 h135 cell"><a href="javascript: void 0;">4/135</a></div>
+          <div class="small-12 h135 cell"><a href="javascript: void 0;">4/135</a></div>
+        </div>
+      </div>
+
+      <div class="small-12 grid-x">
+        <div class="small-12 h135 cell"><a class="hatch" href="javascript: void 0;">12/135 (facultatif)</a></div>
+      </div>
+
+      <div class="small-12 grid-x">
+        <div class="small-8 grid-x">
+          <div class="small-4 h276 cell"><a href="javascript: void 0;">2.67/276</a></div>
+          <div class="small-4 h276 cell"><a href="javascript: void 0;">2.67/276</a></div>
+          <div class="small-4 h276 cell"><a href="javascript: void 0;">2.67/276</a></div>
+        </div>
+        <div class="small-4 grid-x">
+          <div class="small-12 h135 cell"><a href="javascript: void 0;">4/135</a></div>
+          <div class="small-12 h135 cell"><a href="javascript: void 0;">4/135</a></div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
