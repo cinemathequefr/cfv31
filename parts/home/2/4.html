@@ -15,33 +15,57 @@
     }
 
     .grid {
-      width: 1140px; margin: 48px auto; padding: 2px 0 0 0;
+      width: 1140px; margin: 48px auto; padding: 0;
+      color: #000; /*font-weight: bold;*/
     }
 
     .grid a {
       display: block; position: relative;
+      color: inherit; padding: 4px;
       background-color: rgba(12, 13, 26, 1);
-      /*background-color: #111;*/
-      color: inherit;
+    }
+    
+    .cell { position: relative; overflow: hidden; margin: 0; padding: 3px; }
+
+    .h557 > a { height: 557px; }
+    .h416 > a { height: 416px; }
+    .h276 > a { height: 276px; }
+    .h135 > a { height: 135px; }
+    .small-12.grid-x > .h135 > a { height: 135px; background-color: #666; }
+
+
+
+
+    .hidden, .hidden > a {
+      background-color: transparent; color: transparent;
     }
 
-    .grid .cell.h200 a { background-color: #666; }
-    .grid .cell.h700 a { background-color: #666; }
+    .hatch {
+      background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCA0IDQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIj48cGF0aCBkPSJNLTEgMWwyLTJNMCA0bDQtNE0zIDVsMi0yIiBzdHlsZT0ic3Ryb2tlLXdpZHRoOjE7c3Ryb2tlOnJnYmEoMCwgMCwgMCwgLjI1KSIvPjwvc3ZnPg==");
+      background-repeat: repeat;
+    }
 
-    .grid a > .bg {
+    .grid a > .bg { /* Ici, on peut modifier bottom pour réduire la hauteur de l'image de fond (eg 50%) */
       position: absolute;
-      top: 0; right: 0; bottom: 0; left: 0; /* Ici, on peut modifier bottom pour réduire la hauteur de l'image de fond (eg 50%) */
+      top: 0; right: 0; /*bottom: 0;*/ left: 0;
       background-size: cover; background-position: 50% 50%;
     }
 
+    .h557 > a > .bg { bottom: 0; }
+    .h416 > a > .bg { bottom: 96px; }
+    .h276 > a > .bg { bottom: 48px; }
+    .h135 > a > .bg { bottom: 0; }
+
+
     .grid a > .bg > .mask {
       position: absolute;
-      top: 0; right: 0; bottom: 0px; left: 0;
+      top: 0; right: 0; bottom: 0; left: 0;
     }
 
     .grid a > .bg > .mask.shaded {
       background: linear-gradient(to top, rgba(12, 13, 26, 1) 0%, rgba(12, 13, 26, 0.8) 15%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%);
     }
+
 
     .grid a > .masktop {
       position: absolute;
@@ -51,7 +75,7 @@
     }    
 
     .grid a:hover > .masktop {
-      opacity: .75;
+      opacity: .5;
     }
 
     .text {
@@ -60,15 +84,14 @@
       width: 90%;
       color: #fff;
     }
-    
-    .cell { margin: 0; padding: 4px; background-color: #fff; text-align: left;}
-    .h700 > a { height: 702px; }
-    .h500 > a { height: 500px; }
-    .h400 > a { height: 400px; }
-    .h200 > a { height: 198px; } /* 150px - 4px */
 
-    .h400 > a > .bg { bottom: 100px; }
+    .text .type {
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: 0.875rem; 
+    }
 
+    .text .dates { font-size: 1rem; }
 
     .cell h1 {
       margin: 0; padding: 0;
@@ -77,38 +100,166 @@
     }
 
     .cell h1 > .small { font-weight: 300; }
+    .cell.h557 h1 { font-size: 2.25rem; line-height: 1.75rem; }
+    .cell.h557 h1 > .small { font-size: 1.75rem; line-height: 1.75rem; }
+    .cell.h557 .type, .cell.h557 .dates { line-height: 1.75rem; }
 
-    .cell.h500 h1 { font-size: 2.25rem; line-height: 1.75rem; }
-    .cell.h500 h1 > .small { font-size: 1.75rem; line-height: 1.75rem; }
-    .cell.h500 .type, .cell.h500 .dates { line-height: 1.75rem; }
+    .cell.h416 h1 { font-size: 1.75rem; line-height: 1.5rem; }
+    .cell.h416 h1 > .small { font-size: 1.5rem; line-height: 1.5rem; }
+    .cell.h416 .type, .cell.h416 .dates { line-height: 1.5rem; }
+
+    .cell.h276 h1 { font-size: 1.5rem; line-height: 1.5rem; }
+    .cell.h276 h1 > .small { font-size: 1.5rem; line-height: 1.5rem; }
+    .cell.h276 .type, .cell.h276 .dates { line-height: 1.5rem; }
+
+    .cell.h135 h1 { font-size: 1.5rem; line-height: 1.5rem; }
+    .cell.h135 .type, .cell.h135 .dates { line-height: 1rem; }
 
 
-    .cell.h400 h1 { font-size: 1.75rem; line-height: 1.5rem; }
-    .cell.h400 h1 > .small { font-size: 1.5rem; line-height: 1.5rem; }
-    .cell.h400 .type, .cell.h400 .dates { line-height: 1.5rem; }
-
-
-
-    .text .type {
-      font-weight: 700;
-      text-transform: uppercase;
+    .grid .cell.h135.rdv a > .bg > .mask.shaded {
+      background: rgba(0, 0, 0, .45);
     }
 
-    .text .dates { font-size: 1rem; }
+    .grid .cell.h135.rdv .masktop { background-color: #369; }
+    .grid .cell.h135.rdv a:hover .masktop { opacity: 0.9; }
+
+    .rdv .text {
+      text-align: center;
+      bottom: 50px;
+    }
+
+    .rdv a.label {
+      position: absolute; display: block;
+      width: 250px;
+      bottom: 3px; left: calc(50% - 125px);
+      padding: 8px 3px; height: auto; 
+      color: #111; background-color: #fff;
+      text-transform: uppercase; text-align: center; 
+      font-family: Quicksand; font-size: 0.875rem; font-weight: 700;
+      transition: 0.1s;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+
+    .rdv a.label:hover {
+      left: 0; width: 100%; padding-bottom: 18px; padding-top: 18px;
+      color: #369;
+    }
 
 
     </style>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/moment.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
-    <script>WebFont.load({google:{families:["Source+Sans+Pro:400,400italic,600,600italic"]}});</script> 
   </head>
   <body>
-  
+
     <div class="grid grid-x">
-      <div class="small-8 grid-x">
-        <div class="small-12 h500 cell">
+
+      <div class="small-12 grid-x">
+        <div class="small-8 h557 cell">
+          <a href="javascript: void 0;">
+            <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/arte-kino-1800-chevalier/s,1600-29dae1.jpg);">
+              <div class="mask shaded"></div>
+            </div>
+            <div class="masktop" style="background-color: #48412f;"></div>
+            <div class="text">
+              <div class="type">Festival</div>
+              <h1>ArteKino<br><span class="small">L'Europe en 10 films d'aujourd'hui</span></h1>
+              <div class="dates">6-11 décembre 2017</div>
+            </div>
+          </a>
+        </div>
+        <div class="small-4 grid-x">
+          <div class="small-12 h416 cell"><a class="hatch" href="javascript: void 0;">4/416 (épinglé)</a></div>
+          <div class="small-12 h135 cell rdv">
+            <a href="javascript: void 0;">
+              <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/01-films/le-dernier-des-hommes-f-w-murnau/s,725-efb714.jpg);">
+                <div class="mask shaded"></div>
+              </div>
+
+              <div class="masktop"></div>
+              <div class="text">
+                  <h1>Révisions d'hiver</h1>
+                  <!-- <div class="dates">6 décembre 2017-28 février 2018</div> -->
+              </div>
+            </a>
+            <a href="javascript: void 0;" class="label">Révisons nos classiques</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="small-12 grid-x">
+        <div class="small-4 h416 cell">
+          <a href="javascript: void 0;">
+            <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/colombie/s,1600-d8e355.jpg);">
+              <div class="mask shaded"></div>
+            </div>
+            <div class="masktop" style="background-color: #7f7b28;"></div>
+            <div class="text">
+                <div class="type">Panorama</div>
+                <h1>Le cinéma colombien<br><span class="small">Hier, aujourd'hui, demain</span></h1>
+                <div class="dates">30 novembre-10 décembre 2017</div>
+            </div>
+          </a>
+        </div>
+        <div class="small-4 h416 cell">
+          <a href="javascript: void 0;">
+            <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/ophuls-1800/s,1600-068f9c.jpg);">
+              <div class="mask shaded"></div>
+            </div>
+            <div class="masktop" style="background-color: #4d4b61;"></div>
+            <div class="text">
+              <div class="type">Rétrospective</div>
+              <h1>Max Ophuls<br><span class="small">Les visages de l'amour</span></h1>
+              <div class="dates">29 novembre-31 décembre 2017</div>
+            </div>
+          </a>
+        </div>
+        <div class="small-4 grid-x">
+          <div class="small-12 h135 cell rdv">
+            <a href="javascript: void 0;">
+              <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/01-films/le-geant-de-fer-brad-bird/s,725-3a8348.jpg);">
+                <div class="mask shaded"></div>
+              </div>
+
+              <div class="masktop"></div>
+              <div class="text">
+                  <h1>La tête dans les étoiles</h1>
+                  <!-- <div class="dates">6 décembre 2017-4 mars 2018</div> -->
+              </div>
+            </a>
+            <a href="javascript: void 0;" class="label">Jeune public</a>
+          </div>
+          <div class="small-12 h135 cell rdv">
+            <a href="javascript: void 0;">
+              <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/01-films/dix-femmes-pour-un-mari-georges-hatot/s,725-ceab2f.jpg);">
+                <div class="mask shaded"></div>
+              </div>
+              <div class="masktop"></div>
+              <div class="text">
+                  <h1>Burlesques&nbsp;!</h1>
+                  <!-- <div class="dates">6 décembre 2017-4 mars 2018</div> -->
+              </div>
+            </a>
+            <a href="javascript: void 0;" class="label">Fenêtre sur les collections</a>
+          </div>
+          <div class="small-12 h135 cell rdv">
+            <a href="javascript: void 0;">
+              <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/autres/lucky/s,725-16bf04.jpg);">
+                <div class="mask shaded"></div>
+              </div>
+              <div class="masktop"></div>
+              <div class="text">
+                  <h1>Les ateliers du samedi</h1>
+                  <!-- <div class="dates">6 décembre 2017-4 mars 2018</div> -->
+              </div>
+            </a>
+            <a href="javascript: void 0;" class="label">Stages et ateliers</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="small-12 grid-x">
+        <div class="small-4 h416 cell">
           <a href="javascript: void 0;">
             <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/clouzot-1800/s,1600-00c04b.jpg);">
               <div class="mask shaded"></div>
@@ -117,76 +268,229 @@
             <div class="text">
               <div class="type">Films + galerie</div>
               <h1>Le Mystère Clouzot<br><span class="small">Un chercheur d'absolu</span></h1>
-              <div class="dates">Du 8 novembre 2017 au 29 juillet 2018</div>
+              <div class="dates">8 novembre 2017-29 juillet 2018</div>
             </div>
           </a>
         </div>
-        <div class="small-6 h400 cell">
+        <div class="small-4 h416 cell">
           <a href="javascript: void 0;">
-            <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/american-fringe-2-donald-cried/s,1600-ba14e4.jpg);">
+            <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/cycle-urss/s,1600-995cab.jpg);">
               <div class="mask shaded"></div>
             </div>
-            <div class="masktop" style="background-color: #3989a6;"></div>
+            <div class="masktop" style="background-color: #c2320a;"></div>
             <div class="text">
-              <h1>American Fringe, saison 2<br><span class="small">Un autre cinéma indépendant américain</span></h1>
-              <div class="dates">Du 17 au 19 novembre 2017</div>
+              <div class="type">Rétrospective</div>
+              <h1>L'URSS des cinéastes</h1>
+              <div class="dates">18 octobre 2017-15 janvier 2018</div>
             </div>
           </a>
         </div>
-        
-        <div class="small-6 h400 cell">
-          <a href="javascript: void 0;">
-            <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/films/jean-rouch-cine-portrait-de-raymond-depardon-par-jean-rouch/s,1600-64efb4.jpg);">
-              <div class="mask shaded"></div>
-            </div>
-            <div class="masktop" style="background-color: #272170;"></div>
-            <div class="text">
-              <h1>Jean Rouch<br><span class="small">Restaurations, raretés et inachevés</span></h1>
-              <div class="dates">Du 22 au 27 novembre 2017</div>
-            </div>
-          </a>
+        <div class="small-4 grid-x">
+          <div class="small-12 h135 cell rdv">
+            <a href="javascript: void 0;">
+              <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/01-films/playing-men/s,725-c041ec.jpg);">
+                <div class="mask shaded"></div>
+              </div>
+              <div class="masktop"></div>
+              <div class="text">
+                  <h1>Palmarès du festival Entrevues Belfort</h1>
+                  <!-- <div class="dates">6 décembre 2017-4 mars 2018</div> -->
+              </div>
+            </a>
+            <a href="javascript: void 0;" class="label">Aujourd'hui le cinéma</a>
+          </div>
+          <div class="small-12 h135 cell rdv">
+            <a href="javascript: void 0;">
+              <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/douchet/s,1600-0d4765.jpg);">
+                <div class="mask shaded"></div>
+              </div>
+              <div class="masktop"></div>
+              <div class="text">
+                  <h1>Ciné-club Jean Douchet</h1>
+                  <!-- <div class="dates">6 décembre 2017-4 mars 2018</div> -->
+              </div>
+            </a>
+            <a href="javascript: void 0;" class="label">Ciné-club Jean Douchet</a>
+          </div>
+          <div class="small-12 h135 cell rdv">
+            <a href="javascript: void 0;">
+              <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/01-films/cineastes-a-tout-prix-frederic-sojcher/s,725-deb3ee.jpg);">
+                <div class="mask shaded"></div>
+              </div>
+              <div class="masktop"></div>
+              <div class="text">
+                  <h1>La dynastie Sojcher</h1>
+                  <!-- <div class="dates">6 décembre 2017-4 mars 2018</div> -->
+              </div>
+            </a>
+            <a href="javascript: void 0;" class="label">Cinéma d'avant-garde</a>
+          </div>
         </div>
-        
-
-      </div>
-      
-      <div class="small-4 grid-x">
-        <div class="small-12 h200 cell"><a href="javascript: void 0;"><div class="mask"></div><div class="masktop"></div><div class="text"></div></a></div>
-        <div class="small-12 h700 cell"><a href="javascript: void 0;"><div class="mask"></div><div class="masktop"></div><div class="text"></div></a></div>
-      </div>
-      <div class="small-4 h400 cell">
-        <a href="javascript: void 0;">
-          <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/roman-polanski-le-locataire/s,1600-51c66b.jpg);">
-            <div class="mask shaded"></div>
-          </div>
-          <div class="masktop" style="background-color: #4b7365;"></div>
-          <div class="text">
-              <h1>Roman Polanski<br><span class="small">Le corps ne répond plus</span></h1>
-              <div class="dates">Du 30 octobre au 25 novembre 2017</div>
-          </div>
-        </a>
-      </div>
-      <div class="small-4 h400 cell">
-        <a href="javascript: void 0;">
-          <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/colombie/s,1600-d8e355.jpg);">
-            <div class="mask shaded"></div>
-          </div>
-          <div class="masktop" style="background-color: #7f7b28;"></div>
-          <div class="text">
-              <h1>Le cinéma colombien<br><span class="small">Hier, aujourd'hui, demain</span></h1>
-              <div class="dates">Du 30 novembre au 10 cédembre 2017</div>
-          </div>
-        </a>
       </div>
 
 
-      <!-- <div class="small-4 h400 cell"><a href="javascript: void 0;"><div class="mask"></div><div class="masktop"></div><div class="text"></div></a></div> -->
-      <div class="small-4 grid-x">
-        <div class="small-12 h200 cell"><a href="javascript: void 0;"><div class="mask"></div><div class="masktop"></div><div class="text"></div></a></div>
-        <div class="small-12 h200 cell"><a href="javascript: void 0;"><div class="mask"></div><div class="masktop"></div><div class="text"></div></a></div>
+      <div class="small-12 grid-x">
+        <div class="small-8 grid-x">
+          <div class="small-4 h276 cell">
+            <a href="javascript: void 0;">
+              <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/george-a-romero-diary-of-the-dead/s,1600-d9a396.jpg);">
+                <div class="mask shaded"></div>
+              </div>
+              <div class="masktop" style="background-color: #4c512b;"></div>
+              <div class="text">
+                <h1>George A. Romero</h1>
+                <div class="dates">13-30 décembre 2017</div>
+              </div>
+            </a>
+          </div>
+          <div class="small-4 h276 cell">
+            <a href="javascript: void 0;">
+              <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/herve-le-roux-reprise-2/s,1600-10e70b.jpg);">
+                <div class="mask shaded"></div>
+              </div>
+              <div class="masktop" style="background-color: #bd5b31;"></div>
+              <div class="text">
+                <h1>Hommage à Hervé Le Roux</h1>
+                <div class="dates">15-17 décembre 2017</div>
+              </div>
+            </a>
+          </div>
+          <div class="small-4 h276 cell">
+            <a href="javascript: void 0;">
+              <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/samuel-fuller/s,1600-2acc06.jpg);">
+                <div class="mask shaded"></div>
+              </div>
+              <div class="masktop" style="background-color: #332c19;"></div>
+              <div class="text">
+                <h1>Samuel Fuller</h1>
+                <div class="dates">3 janvier-15 février 2018</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="small-4 grid-x">
+          <div class="small-12 h135 cell rdv">
+            <a href="javascript: void 0;">
+              <div class="bg" style="background-image:url(https://www.francetvinfo.fr/image/75ee7yna2-ad7d/580/326/13373150.jpg);">
+                <div class="mask shaded"></div>
+              </div>
+              <div class="masktop"></div>
+              <div class="text">
+                  <h1>Avec Yannick Haenel</h1>
+                  <!-- <div class="dates">6 décembre 2017-4 mars 2018</div> -->
+              </div>
+            </a>
+            <a href="javascript: void 0;" class="label">Parlons cinéma</a>
+          </div>
+          <div class="small-12 h135 cell rdv">
+            <a href="javascript: void 0;">
+              <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/films/danger-diabolik-mario-bava/s,725-e7ee37.jpg);">
+                <div class="mask shaded"></div>
+              </div>
+              <div class="masktop"></div>
+              <div class="text">
+                  <h1>Bande dessinée</h1>
+                  <!-- <div class="dates">6 décembre 2017-4 mars 2018</div> -->
+              </div>
+            </a>
+            <a href="javascript: void 0;" class="label">Cinéma bis</a>
+          </div>
+        </div>
       </div>
-      
+
+      <div class="small-12 grid-x">
+        <div class="small-8 grid-x">
+          <div class="small-4 h276 cell">
+            <a href="javascript: void 0;">
+              <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/paulo-rocha/s,1600-1abc64.jpg);">
+                <div class="mask shaded"></div>
+              </div>
+              <div class="masktop" style="background-color: #364d44;"></div>
+              <div class="text">
+                <h1>Paulo Rocha</h1>
+                <div class="dates">10 janvier-1 février 2018</div>
+              </div>
+            </a>
+          </div>
+          <div class="small-4 h276 cell">
+            <a href="javascript: void 0;">
+              <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/lituanie-1800-summer/s,1600-e1614c.jpg);">
+                <div class="mask shaded"></div>
+              </div>
+              <div class="masktop" style="background-color: #617e8c;"></div>
+              <div class="text">
+                <h1>Cinéma lituanien</h1>
+                <div class="dates">15-28 janvier 2018</div>
+              </div>
+            </a>
+          </div>
+          <div class="small-4 h276 cell">
+            <a href="javascript: void 0;">
+              <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/gerardmer-2018/s,1600-04b7fb.jpg);">
+                <div class="mask shaded"></div>
+              </div>
+              <div class="masktop" style="background-color: #d10707;"></div>
+              <div class="text">
+                <h1>Gérardmer à Paris</h1>
+                <div class="dates">31 janvier-4 février 2018</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="small-4 grid-x">
+          <div class="small-12 h135 cell"><a href="javascript: void 0;">4/135</a></div>
+          <div class="small-12 h135 cell"><a href="javascript: void 0;">4/135</a></div>
+        </div>
+      </div>
+
+      <div class="small-12 grid-x">
+        <div class="small-8 grid-x">
+          <div class="small-4 h276 cell">
+            <a href="javascript: void 0;">
+              <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/akerman-1800-3/s,1600-bcf61e.jpg);">
+                <div class="mask shaded"></div>
+              </div>
+              <div class="masktop" style="background-color: #8e713a;"></div>
+              <div class="text">
+                <h1>Chantal Akerman</h1>
+                <div class="dates">31 janvier-5 mars 2018</div>
+              </div>
+            </a>
+          </div>
+          <div class="small-4 h276 cell">
+            <a href="javascript: void 0;">
+              <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/tod-browning-freaks/s,1600-f1d260.jpg);">
+                <div class="mask shaded"></div>
+              </div>
+              <div class="masktop" style="background-color: #222abd;"></div>
+              <div class="text">
+                <h1>Tod Browning</h1>
+                <div class="dates">14 février-4 mars 2018</div>
+              </div>
+            </a>
+          </div>
+          <div class="small-4 h276 cell">
+            <a href="javascript: void 0;">
+              <div class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/apocalypse-now-ff-coppola-bandeau-storaro/s,1600-23cd10.jpg);">
+                <div class="mask shaded"></div>
+              </div>
+              <div class="masktop" style="background-color: #3a4334;"></div>
+              <div class="text">
+                <h1>Vittorio Storaro</h1>
+                <div class="dates">28 février-5 mars 2018</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="small-4 grid-x">
+          <div class="small-12 h135 cell"><a href="javascript: void 0;">4/135</a></div>
+          <div class="small-12 h135 cell"><a href="javascript: void 0;">4/135</a></div>
+        </div>
+      </div>
+
+
+
     </div>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/3.7.4/riot+compiler.min.js"></script> -->
+
   </body>
 </html>
