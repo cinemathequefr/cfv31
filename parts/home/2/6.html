@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
     <link rel="alternate" type="application/rss+xml" title="Découvrir" href="http://www.cinematheque.fr/decouvrir-rss.html" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
-    <script>WebFont.load({google:{families:["Quicksand:300,700", "Source+Sans+Pro:400,400italic,600,600italic"]}});</script>
+    <script>WebFont.load({google:{families:["Quicksand:300,400,700", "Source+Sans+Pro:300,300italic,400,400italic,600,600italic"]}});</script>
     <style>
     body {
       font-family: Source Sans Pro;
@@ -16,7 +16,85 @@
 
     .grid {
       width: 1140px; margin: 48px auto; padding: 0;
-      color: #000; /*font-weight: bold;*/
+      color: #000;
+    }
+
+    .grid a {
+      display: block; position: relative;
+      padding: 0;
+      color: inherit;
+      transition: 0.2s;
+    }
+
+    .grid a > .bg {
+      display: block; position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      background-size: cover; background-position: 50% 50%;
+    }
+
+
+    .cell { margin: 0; padding: 4px; }
+
+    .grid a > .bg > .mask {
+      display: block; position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+    }
+
+    .grid a > .bg > .mask.shaded {
+      background: linear-gradient(to top, rgba(12, 13, 26, 1) 0%, rgba(12, 13, 26, 0.8) 15%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .grid a > .masktop {
+      display: block; position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      transition: 0.2s;
+      opacity: 0;
+    }
+
+    .grid a:hover > .masktop {
+      opacity: .5;
+    }
+
+
+    .cell h1 {
+      margin: 0; padding: 0;
+      font-family: Quicksand; font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .cell h1 > .small { font-weight: 300; }
+
+    .cell.h564 > a { height: 564px; }
+    .cell.h564 h1 { font-size: 3rem; line-height: 3rem; }
+    .cell.h564 h1 > .small { font-size: 3rem; line-height: 3rem; }
+    .cell.h564 .text { display: block; position: absolute; bottom: 12px; left: 12px; width: 90%; color: #fff; }
+    .cell.h564 .type, .cell.h564 .dates { font-weight: 300; font-size: 1.375rem; text-transform: uppercase; }
+    .cell.h564-r > a { height: 564px; background-color: #369; }
+
+    .cell.h350 > a { height: 350px; background-color: #eee; }
+    .cell.h350 .bg { display: block; position: relative; height: 210px; }
+    .cell.h350 .bg .mask.shaded { background: linear-gradient(to top, rgba(12, 13, 26, 1) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 100%); }
+    .cell.h350 .text { display: block; position: absolute; top: 210px; width: 100%;  padding-top: 36px; text-align: center; }
+    .cell.h350 h1 { display: block; color: #111; font-size: 1.5rem; line-height: 1.5rem; }
+    .cell.h350 h1 .small { color: #111; font-size: 1.375rem; font-weight: 300; }
+
+    /*.cell.h350:hover a { background-color: #d9ad77; }*/
+
+
+    .cell.h171 > a { height: 171px; background-color: #393; }
+
+
+    .hatch {
+      background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCA0IDQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIj48cGF0aCBkPSJNLTEgMWwyLTJNMCA0bDQtNE0zIDVsMi0yIiBzdHlsZT0ic3Ryb2tlLXdpZHRoOjE7c3Ryb2tlOnJnYmEoMCwgMCwgMCwgLjI1KSIvPjwvc3ZnPg==");
+      background-repeat: repeat;
+    }
+
+
+/*
+    .grid {
+      width: 1140px;
+      margin: 48px auto; padding: 0;
+      color: #000;
     }
 
     .grid a {
@@ -45,9 +123,9 @@
       background-repeat: repeat;
     }
 
-    .grid a > .bg { /* Ici, on peut modifier bottom pour réduire la hauteur de l'image de fond (eg 50%) */
+    .grid a > .bg {
       position: absolute;
-      top: 0; right: 0; /*bottom: 0;*/ left: 0;
+      top: 0; right: 0; left: 0;
       background-size: cover; background-position: 50% 50%;
     }
 
@@ -130,28 +208,118 @@
 
     .rdv a.label {
       position: absolute; display: block; overflow: hidden;
-      width: 200px;/*width: 240px;*/
-      top: 3px; left: calc(50% - 100px);/*calc(50% - 120px);*/
-      padding: 4px 3px;/*padding: 8px 3px;*/ height: auto; 
+      width: 200px;
+      top: 3px; left: calc(50% - 100px);
+      padding: 4px 3px; height: auto; 
       color: #111; background-color: #fff;
       text-transform: uppercase; text-align: center; 
-      font-family: Quicksand; font-size: 0.75rem;/*font-size: 0.875rem;*/ line-height: 0.875rem; font-weight: 700;
+      font-family: Quicksand; font-size: 0.75rem; line-height: 0.875rem; font-weight: 700;
       transition: 0.1s;
       cursor: pointer;
       box-sizing: border-box;
-    }
-
-/*
-    .rdv a.label:hover {
-      left: 0; width: 100%; padding-bottom: 18px; padding-top: 18px;
-      color: #369;
     }
 */
 
     </style>
   </head>
+
+
   <body>
 
+
+    <div class="grid grid-x">
+      <div class="small-8 h564 cell">
+        <a href="javascript: void 0;">
+          <span class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/arte-kino-1800-chevalier/s,1600-29dae1.jpg);">
+            <span class="mask shaded"></span>
+          </span>
+          <span class="masktop" style="background-color: #48412f;"></span>
+          <span class="text">
+            <span class="type">Festival</span>
+            <h1>ArteKino<br><span class="small">L'Europe en 10 films d'aujourd'hui</span></h1>
+            <span class="dates">6-11 décembre 2017</span>
+          </span>
+        </a>
+      </div>
+      <div class="small-4 h564-r cell">
+        <a href="javascript: void 0;" class="hatch">
+        </a>
+      </div>
+
+      <div class="small-4 h350 cell">
+        <a href="javascript: void 0;">
+          <span class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/colombie/s,1600-d8e355.jpg);">
+            <span class="mask shaded"></span>
+          </span>
+          <span class="masktop" style="background-color: #7f7b28;"></span>
+          <span class="text">
+            <h1>Le cinéma colombien<br><span class="small">Hier, aujourd'hui, demain</span></h1>
+            <span class="dates">30 novembre-10 décembre 2017</span>
+          </span>
+        </a>
+      </div>
+      <div class="small-4 h350 cell">
+        <a href="javascript: void 0;">
+          <span class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/ophuls-1800/s,1600-068f9c.jpg);">
+            <span class="mask shaded"></span>
+          </span>
+          <span class="masktop" style="background-color: #4d4b61;"></span>
+          <span class="text">
+            <h1>Max Ophuls<br><div class="small">Les visages de l'amour</div></h1>
+            <span class="dates">29 novembre-31 décembre 2017</span>
+          </span>
+        </a>
+      </div>
+      <div class="small-4 grid-x">
+        <div class="small-12 h171 cell">
+          <a href="javascript: void 0;" class="hatch">
+          </a>
+        </div>
+        <div class="small-12 h171 cell">
+          <a href="javascript: void 0;" class="hatch">
+          </a>
+        </div>
+      </div>
+
+      <div class="small-4 h350 cell">
+        <a href="javascript: void 0;">
+          <span class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/clouzot-1800/s,1600-00c04b.jpg);">
+            <span class="mask shaded"></span>
+          </span>
+          <span class="masktop" style="background-color: #1e2f82;"></span>
+
+          <span class="text">
+            <h1>Le Mystère Clouzot<br><span class="small">Un chercheur d'absolu</span></h1>
+            <span class="dates">8 novembre 2017-29 juillet 2018</span>
+          </span>
+        </a>
+      </div>
+      <div class="small-4 h350 cell">
+        <a href="javascript: void 0;">
+          <span class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/cycle-urss/s,1600-995cab.jpg);">
+            <span class="mask shaded"></span>
+          </span>
+          <span class="masktop" style="background-color: #c2320a;"></span>
+          <span class="text">
+              <h1>L'URSS des cinéastes</h1>
+              <span class="dates">18 octobre 2017-15 janvier 2018</span>
+          </span>
+        </a>
+      </div>
+      <div class="small-4 grid-x">
+        <div class="small-12 h171 cell">
+          <a href="javascript: void 0;" class="hatch">
+          </a>
+        </div>
+        <div class="small-12 h171 cell">
+          <a href="javascript: void 0;" class="hatch">
+          </a>
+        </div>
+      </div>
+
+
+
+<!--
     <div class="grid grid-x">
 
       <div class="small-12 grid-x">
@@ -179,7 +347,6 @@
               <div class="masktop"></div>
               <div class="text">
                   <h1>Révisions d'hiver</h1>
-                  <!-- <div class="dates">6 décembre 2017-28 février 2018</div> -->
               </div>
             </a>
             <a href="javascript: void 0;" class="label">Révisons nos classiques</a>
@@ -224,7 +391,6 @@
               <div class="masktop"></div>
               <div class="text">
                   <h1>La tête dans les étoiles</h1>
-                  <!-- <div class="dates">6 décembre 2017-4 mars 2018</div> -->
               </div>
             </a>
             <a href="javascript: void 0;" class="label">Jeune public</a>
@@ -237,7 +403,6 @@
               <div class="masktop"></div>
               <div class="text">
                   <h1>Burlesques&nbsp;!</h1>
-                  <!-- <div class="dates">6 décembre 2017-4 mars 2018</div> -->
               </div>
             </a>
             <a href="javascript: void 0;" class="label">Fenêtre sur les collections</a>
@@ -250,7 +415,6 @@
               <div class="masktop"></div>
               <div class="text">
                   <h1>Les ateliers du samedi</h1>
-                  <!-- <div class="dates">6 décembre 2017-4 mars 2018</div> -->
               </div>
             </a>
             <a href="javascript: void 0;" class="label">Stages et ateliers</a>
@@ -295,7 +459,6 @@
               <div class="masktop"></div>
               <div class="text">
                   <h1>Palmarès du festival Entrevues Belfort</h1>
-                  <!-- <div class="dates">6 décembre 2017-4 mars 2018</div> -->
               </div>
             </a>
             <a href="javascript: void 0;" class="label">Aujourd'hui le cinéma</a>
@@ -308,7 +471,6 @@
               <div class="masktop"></div>
               <div class="text">
                   <h1>Ciné-club Jean Douchet</h1>
-                  <!-- <div class="dates">6 décembre 2017-4 mars 2018</div> -->
               </div>
             </a>
             <a href="javascript: void 0;" class="label">Ciné-club Jean Douchet</a>
@@ -321,7 +483,6 @@
               <div class="masktop"></div>
               <div class="text">
                   <h1>La dynastie Sojcher</h1>
-                  <!-- <div class="dates">6 décembre 2017-4 mars 2018</div> -->
               </div>
             </a>
             <a href="javascript: void 0;" class="label">Cinéma d'avant-garde</a>
@@ -378,7 +539,6 @@
               <div class="masktop"></div>
               <div class="text">
                   <h1>Avec Yannick Haenel</h1>
-                  <!-- <div class="dates">6 décembre 2017-4 mars 2018</div> -->
               </div>
             </a>
             <a href="javascript: void 0;" class="label">Parlons cinéma</a>
@@ -391,7 +551,6 @@
               <div class="masktop"></div>
               <div class="text">
                   <h1>Bande dessinée</h1>
-                  <!-- <div class="dates">6 décembre 2017-4 mars 2018</div> -->
               </div>
             </a>
             <a href="javascript: void 0;" class="label">Cinéma bis</a>
@@ -490,8 +649,8 @@
       </div>
 
 
-
     </div>
+-->
 
   </body>
 </html>
