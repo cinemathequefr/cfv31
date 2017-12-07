@@ -75,150 +75,72 @@
     .cell.h350 .bg { display: block; position: relative; height: 210px; }
     .cell.h350 .bg .mask.shaded { background: linear-gradient(to top, rgba(12, 13, 26, 1) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 100%); }
     .cell.h350 .text { display: block; position: absolute; top: 210px; width: 100%;  padding-top: 36px; text-align: center; }
-    .cell.h350 h1 { display: block; color: #111; font-size: 1.5rem; line-height: 1.5rem; }
-    .cell.h350 h1 .small { color: #111; font-size: 1.375rem; font-weight: 300; }
+    .cell.h350 h1 { display: block; color: #111; font-size: 1.25rem; line-height: 1.5rem; }
+    .cell.h350 h1 .small { color: #111; font-weight: 300; }
 
-    /*.cell.h350:hover a { background-color: #d9ad77; }*/
-
-
+    .cell.h171 { position: relative; }
     .cell.h171 > a { height: 171px; background-color: #393; }
+    .cell.h171 .surcycle-container {
 
-
-    .hatch {
-      background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCA0IDQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIj48cGF0aCBkPSJNLTEgMWwyLTJNMCA0bDQtNE0zIDVsMi0yIiBzdHlsZT0ic3Ryb2tlLXdpZHRoOjE7c3Ryb2tlOnJnYmEoMCwgMCwgMCwgLjI1KSIvPjwvc3ZnPg==");
-      background-repeat: repeat;
+      display: block; position: absolute;
+      bottom: 0; left: 0;
+      padding: 6px 8px 0 2px;
+      max-width: 45%; text-align: left;
+      background-color: #fff; color: #111;
+      font-family: Quicksand; font-size: 1rem; font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1rem;
     }
+    .cell.h171 /*.surcycle-container >*/ .surcycle {
+      display: inline-block;
+    }
+
 
 
 /*
-    .grid {
-      width: 1140px;
-      margin: 48px auto; padding: 0;
-      color: #000;
+    .cell.h171 a.label {
+      display: block; position: absolute;
+      top: 4px; right: 4px;
+      padding: 8px;
+      background-color: #fff; color: #111;
+      font-family: Source Sans Pro; font-size: 1rem; font-weight: 600;
+    }
+    .cell.h171 a:not(.label):hover > .masktop {
+      opacity: 1;
+    }
+*/
+
+    .upcoming {
+      display: block; position: absolute;
+      top: 33%; left: 50%;
+      width: 80px; height: 80px;
+      border: 2px solid #eee;
+      color: #eee;
+      font-family: "Quicksand",sans-serif; font-weight: 700;
+      line-height: 75px;
+      text-align: center;
+      text-transform: uppercase;
+      border-radius: 50%;
+      -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);
     }
 
-    .grid a {
-      display: block; position: relative;
-      color: inherit; padding: 4px;
-      background-color: rgba(12, 13, 26, 1);
+
+    .triangle {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) translateY(-1px);
+      width: 25px; height: 10px;
+      background: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjIwMHB4IiBoZWlnaHQ9IjgwcHgiIHZpZXdCb3g9IjAgMCAyMDAgODAiPjxwb2x5Z29uIGZpbGw9IiMwYTBhMGEiIHN0cm9rZS13aWR0aD0iMCIgcG9pbnRzPSIwIDAgMjAwIDAgMTAwIDgwIi8+PC9zdmc+");
+      background-repeat: no-repeat; background-size: cover;
     }
-    
-    .cell { position: relative; overflow: hidden; margin: 0; padding: 3px; }
-
-    .h557 > a { height: 557px; }
-    .h416 > a { height: 416px; }
-    .h276 > a { height: 276px; }
-    .h135 > a { height: 135px; }
-    .small-12.grid-x > .h135 > a { height: 135px; background-color: #666; }
 
 
-
-
-    .hidden, .hidden > a {
-      background-color: transparent; color: transparent;
-    }
 
     .hatch {
       background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCA0IDQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIj48cGF0aCBkPSJNLTEgMWwyLTJNMCA0bDQtNE0zIDVsMi0yIiBzdHlsZT0ic3Ryb2tlLXdpZHRoOjE7c3Ryb2tlOnJnYmEoMCwgMCwgMCwgLjI1KSIvPjwvc3ZnPg==");
       background-repeat: repeat;
     }
 
-    .grid a > .bg {
-      position: absolute;
-      top: 0; right: 0; left: 0;
-      background-size: cover; background-position: 50% 50%;
-    }
-
-    .h557 > a > .bg { bottom: 0; }
-    .h416 > a > .bg { bottom: 96px; }
-    .h276 > a > .bg { bottom: 48px; }
-    .h135 > a > .bg { bottom: 0; }
-
-
-    .grid a > .bg > .mask {
-      position: absolute;
-      top: 0; right: 0; bottom: 0; left: 0;
-    }
-
-    .grid a > .bg > .mask.shaded {
-      background: linear-gradient(to top, rgba(12, 13, 26, 1) 0%, rgba(12, 13, 26, 0.8) 15%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%);
-    }
-
-
-    .grid a > .masktop {
-      position: absolute;
-      top: 0; right: 0; bottom: 0; left: 0;
-      transition: 0.2s;
-      opacity: 0;
-    }    
-
-    .grid a:hover > .masktop {
-      opacity: .5;
-    }
-
-    .text {
-      position: absolute;
-      bottom: 12px; left: 12px;
-      width: 90%;
-      color: #fff;
-    }
-
-    .text .type {
-      font-weight: 300;
-      text-transform: uppercase;
-      font-size: 0.875rem; 
-    }
-
-    .text .dates { font-size: 1rem; }
-
-    .cell h1 {
-      margin: 0; padding: 0;
-      font-family: Quicksand; font-weight: 700;
-      text-transform: uppercase;
-    }
-
-    .cell h1 > .small { font-weight: 300; }
-    .cell.h557 h1 { font-size: 2.25rem; line-height: 1.75rem; }
-    .cell.h557 h1 > .small { font-size: 1.75rem; line-height: 1.75rem; }
-    .cell.h557 .type, .cell.h557 .dates { line-height: 1.75rem; }
-
-    .cell.h416 h1 { font-size: 1.25rem; line-height: 1.25rem; }
-    .cell.h416 h1 > .small { font-size: 1.25rem; line-height: 1.25rem; }
-    .cell.h416 .type, .cell.h416 .dates { line-height: 1.25rem; }
-
-    .cell.h276 h1 { font-size: 1.25rem; line-height: 1.25rem; }
-    .cell.h276 h1 > .small { font-size: 1.25rem; line-height: 1.25rem; }
-    .cell.h276 .type, .cell.h276 .dates { line-height: 1.25rem; }
-
-    .cell.h135 h1 { font-size: 1.25rem; line-height: 1.25rem; }
-    .cell.h135 .type, .cell.h135 .dates { line-height: 1.25rem; }
-
-
-    .grid .cell.h135.rdv a > .bg > .mask.shaded {
-      background: rgba(0, 0, 0, .45);
-    }
-
-    .grid .cell.h135.rdv .masktop { background-color: #369; }
-    .grid .cell.h135.rdv a:hover .masktop { opacity: 0.9; }
-
-    .rdv .text {
-      text-align: center;
-      bottom: 50px;
-    }
-
-    .rdv a.label {
-      position: absolute; display: block; overflow: hidden;
-      width: 200px;
-      top: 3px; left: calc(50% - 100px);
-      padding: 4px 3px; height: auto; 
-      color: #111; background-color: #fff;
-      text-transform: uppercase; text-align: center; 
-      font-family: Quicksand; font-size: 0.75rem; line-height: 0.875rem; font-weight: 700;
-      transition: 0.1s;
-      cursor: pointer;
-      box-sizing: border-box;
-    }
-*/
 
     </style>
   </head>
@@ -251,6 +173,7 @@
           <span class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/colombie/s,1600-d8e355.jpg);">
             <span class="mask shaded"></span>
           </span>
+          <span class="triangle"></span>
           <span class="masktop" style="background-color: #7f7b28;"></span>
           <span class="text">
             <h1>Le cinéma colombien<br><span class="small">Hier, aujourd'hui, demain</span></h1>
@@ -263,22 +186,35 @@
           <span class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/ophuls-1800/s,1600-068f9c.jpg);">
             <span class="mask shaded"></span>
           </span>
+          <span class="triangle"></span>
           <span class="masktop" style="background-color: #4d4b61;"></span>
           <span class="text">
-            <h1>Max Ophuls<br><div class="small">Les visages de l'amour</div></h1>
+            <h1>Max Ophuls</h1>
             <span class="dates">29 novembre-31 décembre 2017</span>
           </span>
         </a>
       </div>
       <div class="small-4 grid-x">
         <div class="small-12 h171 cell">
-          <a href="javascript: void 0;" class="hatch">
+          <a href="javascript: void 0;">
+            <span class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/01-films/breve-rencontre-david-lean/s,725-f17814.jpg);"></span>
+            <span class="masktop" style="background-color: #369;"></span>
+            <!-- <span class="surcycle-container"> --><span class="surcycle">Révisons nos classiques</span><!-- </span> -->
           </a>
+          <!-- <a href="javascript: void 0;" class="label"></a> -->
         </div>
+
         <div class="small-12 h171 cell">
-          <a href="javascript: void 0;" class="hatch">
+          <a href="javascript: void 0;">
+          <span class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/01-films/les-debuts-de-max-au-cinema-louis-gasnier-et-max-linder/s,725-4720c1.jpg);">
+          </span>
+          <span class="masktop" style="background-color: #936;"></span>
+          <!-- <span class="label">Fenêtre sur les collections</span> -->
           </a>
+          <!-- <a href="javascript: void 0;" class="label"></a> -->
         </div>
+
+
       </div>
 
       <div class="small-4 h350 cell">
@@ -286,10 +222,10 @@
           <span class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/clouzot-1800/s,1600-00c04b.jpg);">
             <span class="mask shaded"></span>
           </span>
+          <span class="triangle"></span>
           <span class="masktop" style="background-color: #1e2f82;"></span>
-
           <span class="text">
-            <h1>Le Mystère Clouzot<br><span class="small">Un chercheur d'absolu</span></h1>
+            <h1>Le Mystère Clouzot</h1>
             <span class="dates">8 novembre 2017-29 juillet 2018</span>
           </span>
         </a>
@@ -299,6 +235,7 @@
           <span class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/cycle-urss/s,1600-995cab.jpg);">
             <span class="mask shaded"></span>
           </span>
+          <span class="triangle"></span>
           <span class="masktop" style="background-color: #c2320a;"></span>
           <span class="text">
               <h1>L'URSS des cinéastes</h1>
@@ -316,6 +253,120 @@
           </a>
         </div>
       </div>
+      <div class="small-4 h350 cell">
+        <a href="javascript: void 0;">
+          <span class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/george-a-romero-diary-of-the-dead/s,1600-d9a396.jpg);">
+            <span class="mask shaded"></span>
+          </span>
+          <span class="triangle"></span>
+          <span class="masktop" style="background-color: #4c512b;"></span>
+          <span class="text">
+              <h1>George A. Romero</h1>
+              <span class="dates">13-30 décembre 2017</span>
+          </span>
+        </a>
+      </div>
+      <div class="small-4 h350 cell">
+        <a href="javascript: void 0;">
+          <span class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/herve-le-roux-reprise-2/s,1600-10e70b.jpg);">
+            <span class="mask shaded"></span>
+          </span>
+          <span class="triangle"></span>
+          <span class="masktop" style="background-color: #bd5b31;"></span>
+          <span class="upcoming">À venir</span>
+          <span class="text">
+              <h1>Hommage à Hervé Le Roux</h1>
+              <span class="dates">15-17 décembre 2017</span>
+          </span>
+        </a>
+      </div>
+      <div class="small-4 grid-x">
+        <div class="small-12 h171 cell">
+          <a href="javascript: void 0;" class="hatch">
+          </a>
+        </div>
+        <div class="small-12 h171 cell">
+          <a href="javascript: void 0;" class="hatch">
+          </a>
+        </div>
+      </div>
+      <div class="small-4 h350 cell">
+        <a href="javascript: void 0;">
+          <span class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/samuel-fuller/s,1600-2acc06.jpg);">
+            <span class="mask shaded"></span>
+          </span>
+          <span class="triangle"></span>
+          <span class="masktop" style="background-color: #332c19;"></span>
+          <span class="upcoming">À venir</span>
+          <span class="text">
+              <h1>Samuel Fuller</h1>
+              <span class="dates">3 janvier-15 février 2018</span>
+          </span>
+        </a>
+      </div>
+      <div class="small-4 h350 cell">
+        <a href="javascript: void 0;">
+          <span class="bg" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/paulo-rocha/s,1600-1abc64.jpg);">
+            <span class="mask shaded"></span>
+          </span>
+          <span class="triangle"></span>
+          <span class="masktop" style="background-color: #364d44;"></span>
+          <span class="upcoming">À venir</span>
+          <span class="text">
+              <h1>Paulo Rocha</h1>
+              <span class="dates">10 janvier-1er février 2018</span>
+          </span>
+        </a>
+      </div>
+      <div class="small-4 grid-x">
+        <div class="small-12 h171 cell">
+          <a href="javascript: void 0;" class="hatch">
+          </a>
+        </div>
+        <div class="small-12 h171 cell">
+          <a href="javascript: void 0;" class="hatch">
+          </a>
+        </div>
+      </div>
+
+
+
+<!--
+      <div class="small-4 h350 cell">
+        <a href="javascript: void 0;">
+          <span class="bg" style="background-image:url();">
+            <span class="mask shaded"></span>
+          </span>
+          <span class="masktop" style="background-color: #ccc;"></span>
+          <span class="text">
+              <h1></h1>
+              <span class="dates"></span>
+          </span>
+        </a>
+      </div>
+      <div class="small-4 h350 cell">
+        <a href="javascript: void 0;">
+          <span class="bg" style="background-image:url();">
+            <span class="mask shaded"></span>
+          </span>
+          <span class="masktop" style="background-color: #ccc;"></span>
+          <span class="text">
+              <h1></h1>
+              <span class="dates"></span>
+          </span>
+        </a>
+      </div>
+      <div class="small-4 grid-x">
+        <div class="small-12 h171 cell">
+          <a href="javascript: void 0;" class="hatch">
+          </a>
+        </div>
+        <div class="small-12 h171 cell">
+          <a href="javascript: void 0;" class="hatch">
+          </a>
+        </div>
+      </div>
+-->
 
 
 
