@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflaer.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css"> -->
+    <link rel="stylesheet" href="../../../foundation-6.4.3.flex-grid-only.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
-    <script>WebFont.load({google:{families:["Source+Sans+Pro:400,400italic,600,600italic"]}});</script>
+    <script>WebFont.load({google:{families:["Quicksand:300,700", "Source+Sans+Pro:400,400italic,600,600italic"]}});</script>
     <title>CFv31 Home 7</title>
     <style>
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     .mask {
       display: block; position: absolute;
@@ -21,36 +27,58 @@
     .grid .cell { margin: 0; padding: 4px; background-color: #fff; overflow: hidden; }
     .grid a.cycle { display: block; position: relative; padding: 0; color: inherit; transition: 0.2s; }
     .grid a.cycle span { display: block; }
-    .grid a.cycle > .img { display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-size: cover; background-position: 50% 50%; }
+    .grid a.cycle > .img { display: block; position: absolute; top: 0; right: 0; background-size: cover; background-position: 50% 50%; }
     .grid a.cycle > .img > .mask.shaded { background: linear-gradient(to top, rgba(12, 13, 26, 1) 0%, rgba(12, 13, 26, 0.8) 15%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%); }
     .grid a.cycle:hover > .masktop { opacity: 0.5; }
     .grid .text { position: absolute; }
     .grid h1 { margin: 0; padding: 0; font-weight: 700; font-family: Quicksand; text-transform: uppercase; }
     .grid h1 .small { font-weight: 300; }
 
-    .c8h564 > a { height: 564px; }
-    .c8h564 h1 { padding: 0.25rem 0 0.5rem 0; font-size: 3rem; line-height: 3rem; }
-    .c8h564 h1 > .small { font-size: 3rem; line-height: 3rem; }
-    .c8h564 .text { bottom: 12px; left: 12px; width: 90%; color: #fff; font-weight: 300; font-size: 1.375rem; line-height: 1.375rem; }
-    .c8h564 .type, .c8h564 .dates { font-family: Quicksand; text-transform: uppercase; }
+    .cell.c8h564 > a.cycle { height: 564px; }
+    .cell.c8h564 > a.cycle > .img { left: 0; bottom: 0; }
+    .cell.c8h564 h1 { padding: 0.25rem 0 0.5rem 0; font-size: 3rem; line-height: 3rem; }
+    .cell.c8h564 h1 > .small { font-size: 3rem; line-height: 3rem; }
+    .cell.c8h564 .text { bottom: 12px; left: 12px; width: 90%; color: #fff; font-weight: 300; font-size: 1.375rem; line-height: 1.375rem; }
+    .cell.c8h564 .type, .cell.c8h564 .dates { font-family: Quicksand; text-transform: uppercase; }
 
 
 
-    .c4h418 > a { height: 418px; background-color: #eee; }
-    .c4h418 > a .img { height: 278px; }
-    .c4h418 .triangle { position: absolute; top: 278px; left: 50%; transform: translateX(-50%) translateY(-1px); width: 25px; height: 10px; }
+
+    .cell.c4h418 > a { height: 418px; background-color: #eee; }
+    .cell.c4h418 > a .img { left: 0; height: 278px; }
+    .cell.c4h418 .triangle { position: absolute; top: 278px; left: 50%; transform: translateX(-50%) translateY(-1px); width: 25px; height: 10px; }
 
 
-    .c4h418 .text { top: 348px; /*height: 140px;*/ width: 100%; text-align: center; transform: translateY(-50%);}
-    .c4h418 h1 { display: block; color: #111; font-size: 1.25rem; line-height: 1.5rem; }
-    .c4h418 h1 .small { color: #111; font-weight: 300; }
-
+    .cell.c4h418 .text { top: 348px; /*height: 140px;*/ width: 100%; text-align: center; transform: translateY(-50%);}
+    .cell.c4h418 h1 { display: block; color: #111; font-size: 1.25rem; line-height: 1.5rem; }
+    .cell.c4h418 h1 .small { color: #111; font-weight: 300; }
 
     .h278 > a { height: 278px; background-color: #e4a835; }
 
+    .cell.c4h205 .innercell { position: relative; height: 205px; }
 
-    .h205 > a { height: 205px; background-color: #393; }
-    .h205 > a .img { right: 0; top: 15px; bottom: 0; width: 150px; }
+    .cell.c4h205 .surcycle {
+      position: absolute; top: 0; left: 0;
+      height: 24px; line-height: 24px; /*padding: 0 4px;*/
+      display: inline-block;
+      font-weight: 700;  font-family: Quicksand; font-size: 0.875rem;
+      text-transform: uppercase; /*text-decoration: underline;*/
+    }
+    /*.cell.c4h205 .surcycle:before { content: ""; }*/
+    
+    .cell.c4h205 .surcycle:hover { color: red; }
+    .cell.c4h205 .cycle {
+      background-color: #666;
+      position: absolute; top: 24px; right: 0; bottom: 0; left: 0; overflow: hidden;
+    }
+    .cell.c4h205 .img {
+      height: 177px; width: 160px;
+    }
+
+    .cell.c4h205 .text { padding: 4px; width: 190px; }
+    .cell.c4h205 h1 {
+      font-size: 1.25rem; color: #fff;
+    }
 
 
     .hatch {
@@ -124,8 +152,29 @@
 
 
         <div class="small-4 grid-x">
-          <div class="small-12 h205 cell"><a class="cycle" href="javascript: void 0;">4cols × 205px<span class="img hatch">(150 × 190)</span></a></div>
-          <div class="small-12 h205 cell"><a class="cycle" href="javascript: void 0;">4cols × 205px<span class="img hatch"></span></a></div>
+
+          <div class="small-12 c4h205 cell">
+            <div class="innercell">
+              <a class="surcycle" href="javascript: void 0;">Révisons nos classiques</a>
+              <a class="cycle" href="javascript: void 0;">
+                <span class="text">
+                  <h1>Hiver 2017-2018</h1>
+                </span>
+                <span class="img" style="background-image:url(http://www.cinematheque.fr/cache/media/01-films/scarface-howard-hawks-bandeau-revisons-nos-classiques-hiver-2017/s,1600-0ce073.jpg);">
+              </a>
+            </div>
+          </div>
+          <div class="small-12 c4h205 cell">
+            <div class="innercell">
+              <a class="surcycle" href="javascript: void 0;">Jeune public</a>
+              <a class="cycle" href="javascript: void 0;" style="background-color: #369;">
+                <span class="text">
+                  <h1>La tête dans les étoiles</h1>
+                </span>
+                <span class="img" style="background-image:url(http://www.cinematheque.fr/cache/media/le-geant-de-fer-brad-bird/s,1600-0b7dce.jpg);">
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
