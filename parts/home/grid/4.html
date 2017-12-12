@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflaer.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+    <style>
+
+    .grid {
+      width: 1140px; margin: 48px auto; padding: 0;
+      color: #000; font-weight: bold;
+    }
+
+    .grid a {
+      display: block; position: relative;
+      color: inherit; padding: 0;
+    }
+
+    .cell { margin: 0; padding: 4px; }
+
+    .h564 > a { height: 564px; background-color: #3573e4; }
+
+    .h350 > a { height: 350px; background-color: #801d55; }
+    .h350 > a .img { display: block; height: 210px; }
+
+
+    .h278 > a { height: 278px; background-color: #e4a835; }
+    .h171 > a { height: 171px; background-color: #393; }
+
+
+    .hatch {
+      background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCA0IDQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIj48cGF0aCBkPSJNLTEgMWwyLTJNMCA0bDQtNE0zIDVsMi0yIiBzdHlsZT0ic3Ryb2tlLXdpZHRoOjE7c3Ryb2tlOnJnYmEoMCwgMCwgMCwgLjI1KSIvPjwvc3ZnPg==");
+      background-repeat: repeat;
+    }
+
+    .colr { padding-left: 0; }
+
+    </style>
+    <title>CFv31 : Grid</title>
+  </head>
+  <body>
+    <div class="grid grid-x">
+
+      <div class="small-12 grid-x">
+        <div class="small-8 h564 cell"><a href="javascript: void 0;">8cols × 564px (ratio 4/3)</a></div>
+        <div class="small-4 grid-x">
+          <div class="small-12 h278 cell"><a href="javascript: void 0;">4cols × 278px</a></div>
+          <div class="small-12 h278 cell"><a href="javascript: void 0;">4cols × 278px</a></div>
+        </div>
+      </div>
+
+      <div class="small-12 grid-x">
+        <div class="small-4 h350 cell"><a href="javascript: void 0;"><span class="img hatch">4cols × 350px (× 210px)</span></a></div>
+        <div class="small-4 h350 cell"><a href="javascript: void 0;"><span class="img hatch">4cols × 350px (× 210px)</span></a></div>
+        <div class="small-4 grid-x">
+          <div class="small-12 h171 cell"><a href="javascript: void 0;">4cols × 171px</a></div>
+          <div class="small-12 h171 cell"><a href="javascript: void 0;">4cols × 171px</a></div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

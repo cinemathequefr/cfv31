@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflaer.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
+    <script>WebFont.load({google:{families:["Source+Sans+Pro:400,400italic,600,600italic"]}});</script>
+    <title>CFv31 Home 7</title>
+    <style>
+
+    .mask {
+      display: block; position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+    }
+
+    .masktop { transition: 0.2s; opacity: 0; }
+
+    .grid { width: 1140px; margin: 48px auto; padding: 0; color: #000; font-family: Source Sans Pro; }
+    .grid .cell { margin: 0; padding: 4px; background-color: #fff; overflow: hidden; }
+    .grid a.cycle { display: block; position: relative; padding: 0; color: inherit; transition: 0.2s; }
+    .grid a.cycle span { display: block; }
+    .grid a.cycle > .img { display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-size: cover; background-position: 50% 50%; }
+    .grid a.cycle > .img > .mask.shaded { background: linear-gradient(to top, rgba(12, 13, 26, 1) 0%, rgba(12, 13, 26, 0.8) 15%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%); }
+    .grid a.cycle:hover > .masktop { opacity: 0.5; }
+    .grid .text { position: absolute; }
+    .grid h1 { margin: 0; padding: 0; font-weight: 700; font-family: Quicksand; text-transform: uppercase; }
+    .grid h1 .small { font-weight: 300; }
+
+    .c8h564 > a { height: 564px; }
+    .c8h564 h1 { padding: 0.25rem 0 0.5rem 0; font-size: 3rem; line-height: 3rem; }
+    .c8h564 h1 > .small { font-size: 3rem; line-height: 3rem; }
+    .c8h564 .text { bottom: 12px; left: 12px; width: 90%; color: #fff; font-weight: 300; font-size: 1.375rem; line-height: 1.375rem; }
+    .c8h564 .type, .c8h564 .dates { font-family: Quicksand; text-transform: uppercase; }
+
+
+
+    .c4h418 > a { height: 418px; background-color: #eee; }
+    .c4h418 > a .img { height: 278px; }
+    .c4h418 .triangle { position: absolute; top: 278px; left: 50%; transform: translateX(-50%) translateY(-1px); width: 25px; height: 10px; }
+
+
+    .c4h418 .text { top: 348px; /*height: 140px;*/ width: 100%; text-align: center; transform: translateY(-50%);}
+    .c4h418 h1 { display: block; color: #111; font-size: 1.25rem; line-height: 1.5rem; }
+    .c4h418 h1 .small { color: #111; font-weight: 300; }
+
+
+    .h278 > a { height: 278px; background-color: #e4a835; }
+
+
+    .h205 > a { height: 205px; background-color: #393; }
+    .h205 > a .img { right: 0; top: 15px; bottom: 0; width: 150px; }
+
+
+    .hatch {
+      background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCA0IDQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIj48cGF0aCBkPSJNLTEgMWwyLTJNMCA0bDQtNE0zIDVsMi0yIiBzdHlsZT0ic3Ryb2tlLXdpZHRoOjE7c3Ryb2tlOnJnYmEoMCwgMCwgMCwgLjI1KSIvPjwvc3ZnPg==");
+      background-repeat: repeat;
+    }
+
+    .colr { padding-left: 0; }
+
+    .triangle {
+      background: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjIwMHB4IiBoZWlnaHQ9IjgwcHgiIHZpZXdCb3g9IjAgMCAyMDAgODAiPjxwb2x5Z29uIGZpbGw9IiMwYTBhMGEiIHN0cm9rZS13aWR0aD0iMCIgcG9pbnRzPSIwIDAgMjAwIDAgMTAwIDgwIi8+PC9zdmc+");
+      background-repeat: no-repeat; background-size: cover;
+    }
+
+
+    </style>
+    <title>CFv31 : Grid</title>
+  </head>
+  <body>
+    <div class="grid grid-x">
+
+      <div class="small-12 grid-x">
+        <div class="small-8 c8h564 cell">
+          <a class="cycle" href="javascript: void 0;">
+            <span class="img" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/arte-kino-1800-chevalier/s,1600-29dae1.jpg);">
+              <span class="mask shaded"></span>
+            </span>
+            <span class="mask masktop" style="background-color: #48412f;"></span>
+            <span class="text">
+              <span class="type">Festival</span>
+              <h1>ArteKino<br><span class="small">L'Europe en 10 films d'aujourd'hui</span></h1>
+              <span class="dates">6-11 décembre 2017</span>
+            </span>
+          </a>
+        </div>
+        <div class="small-4 grid-x">
+          <div class="small-12 h278 cell"><a class="cycle" href="javascript: void 0;">4cols × 278px</a></div>
+          <div class="small-12 h278 cell"><a class="cycle" href="javascript: void 0;">4cols × 278px</a></div>
+        </div>
+      </div>
+
+      <div class="small-12 grid-x">
+
+        <div class="small-4 c4h418 cell">
+          <a class="cycle" href="javascript: void 0;">
+            <span class="img" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/colombie/s,1600-d8e355.jpg);">
+              <span class="mask shaded"></span>
+            </span>
+            <span class="triangle"></span>
+            <span class="mask masktop" style="background-color: #7f7b28;"></span>
+            <span class="text">
+              <h1>Le cinéma colombien<br><span class="small">Hier, aujourd'hui, demain</span></h1>
+              <span class="dates">30 novembre-10 décembre 2017</span>
+            </span>
+          </a>
+        </div>
+        <div class="small-4 c4h418 cell">
+          <a class="cycle" href="javascript: void 0;">
+            <span class="img" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/ophuls-1800/s,1600-068f9c.jpg);">
+              <span class="mask shaded"></span>
+            </span>
+            <span class="triangle"></span>
+            <span class="mask masktop" style="background-color: #4d4b61;"></span>
+            <span class="text">
+              <h1>Max Ophuls</h1>
+              <span class="dates">29 novembre-31 décembre 2017</span>
+            </span>
+          </a>
+        </div>
+
+
+
+        <div class="small-4 grid-x">
+          <div class="small-12 h205 cell"><a class="cycle" href="javascript: void 0;">4cols × 205px<span class="img hatch">(150 × 190)</span></a></div>
+          <div class="small-12 h205 cell"><a class="cycle" href="javascript: void 0;">4cols × 205px<span class="img hatch"></span></a></div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>
