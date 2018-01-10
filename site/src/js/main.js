@@ -10,5 +10,5 @@ var state = {
   }
 }
 
-
 riot.mount("app", state);
+

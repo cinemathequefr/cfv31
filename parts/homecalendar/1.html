@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflaer.com/ajax/libs/normalize/7.0.0/normalize.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+    <!-- <link rel="stylesheet" href="../../foundation-6.4.3.flex-grid-only.min.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
+    <script>WebFont.load({google:{families:["Quicksand:300,700", "Source+Sans+Pro:400,400italic,600,600italic,700,700italic"]}});</script>
+    <title>CFv31 Calendrier home 1</title>
+    <style>
+    body {
+      margin: 0; 
+      background-color: #eee;
+    }
+
+    h2 {
+      font-family: Quicksand; font-weight: 700; text-transform: uppercase; font-size: 1.75rem; color: #333; text-align: center;
+    }
+
+    .home-calendar {
+      display: block; position: relative;
+      width: 100%;
+      margin: 48px auto;
+      background-color: #fff;
+      color: #444;
+      line-height: 1.375rem;
+    }
+
+
+    .home-calendar ul {
+      list-style-type: none;
+      padding: 0; margin: 0;
+    }
+
+    li {
+      line-height: 1.375rem;
+    }
+
+    a:link, a:hover, a:active, a:visited { color: #444; text-decoration: none; }
+
+    a.show {
+      position: relative; display: block;
+      padding: 12px 8px; margin: 0 0;
+      transition: 0.15s;
+      font-size: 1rem;
+    }
+    a.show:hover { background-color: #eee; }
+
+    hr.short {
+      width: 60px; margin: 4px 0;
+    }
+
+    /*.hi { border: solid 2px #ddd; }*/
+
+    .grid { width: 1140px; padding: 0; margin: 0 auto; font-family: Source Sans Pro; }
+    .grid .cell { margin: 0; padding: 4px; overflow: hidden;/* outline: solid 1px red;*/ }
+
+
+    .showtitle { font-weight: 700; }
+
+    .conf, .film > .title { color: #960; color: #a50; /*font-weight: 700;*/ }
+
+    .time { font-weight: bold; }
+
+    .time, .salle, .cycle, .title, .director { display: inline-block; }
+    .cycle { text-transform: uppercase; font-size: 0.875rem; }
+    /*.time:after, .salle:after  { content: " - "; }*/
+    .salle { font-size: 0.875rem; border: solid 1px #ccc; padding: 0 4px; text-align: center; width: 30px;}
+
+    .rem1, .rem2 { font-size: 0.875rem; /*line-height: 1.125rem; */font-weight: 700; }
+    .rem1 { color: #666; }
+    .rem2 { color: #c33; }
+
+
+    </style>
+    <title>CFv31 : Grid</title>
+  </head>
+  <body>
+    <div class="home-calendar">
+      <div class="grid grid-x">
+        
+        <div class="cell small-12"><h2>Vendredi 8 décembre 2017</h2></div>
+
+        <!-- Col 1 : jusqu'à 17h00 inclus -->
+        <div class="cell small-12 medium-4">
+          <a class="show" href="javascript: void 0;">
+            <div class="time">14h00</div>
+            <div class="salle">HL</div>
+            <div class="cycle">Révisons nos classiques</div>
+            <ul>
+              <li class="film"><div class="title">Les Amants de la nuit</div> <div class="director">Nicholas Ray</div>, 1948</li>
+            </ul>
+          </a>
+          <hr class="short">
+          <a class="show" href="javascript: void 0;">
+            <div class="time">14h30</div>
+            <div class="salle">GF</div>
+            <div class="cycle">Le Conservatoire des techniques</div>
+            <ul>
+              <li class="conf">Les 10 ans du Conservatoire des techniques, trois anniversaires, hommage à deux pionniers : Émile Reynaud et Georges Demenÿ. Conférence de Sylvie Saerens et Laurent Mannoni</li>
+            </ul>
+          </a>
+          <hr class="short">
+          <a class="show" href="javascript: void 0;">
+            <div class="time">17h00</div>
+            <div class="salle">HL</div>
+            <div class="cycle">L'URSS des cinéastes</div>
+            <div class="rem2">En remplacement du film Le Chemin de la vie</div>
+            <ul>
+              <li class="film"><div class="title">Femmes en révolte (Amour et haine)</div> <div class="director">Albert Hendelstein</div>, 1935</li>
+            </ul>
+          </a>
+        </div>
+
+        <!-- Col 2 : de 17h00 exclu à 19h30 exclu -->
+        <div class="cell small-12 medium-4">
+          <a class="show" href="javascript: void 0;">
+            <div class="time">18h30</div>
+            <div class="salle">JE</div>
+            <div class="cycle">Fenêtre sur les collections</div>
+            <div class="showtitle">Burlesque : amour et animaux</div>
+            <div class="rem1">Séance présentée par Céline Ruivo et Emmanuelle Berthault. Accompagnement musical de Joël Grare</div>
+            <ul>
+              <li class="film short"><div class="title">Dix femmes pour un mari</div> <div class="director">Georges Hatot</div>, 1905</li>
+              <li class="film short"><div class="title">Deux grandes douleurs</div> <div class="director"> Anonyme</div>, 1908</li>
+              <li class="film short"><div class="title">Le Chien et la pipe</div> <div class="director">Anonyme</div>, 1908</li>
+              <li class="film short"><div class="title">Lui et la dactylographe</div> <div class="director">Hal Roach</div>, 1919</li>
+              <li class="film short"><div class="title">The Kitchen Lady</div> <div class="director">Eddie Cline</div>, 1918</li>
+            </ul>
+          </a>
+          <hr class="short">
+          <a class="show hi" href="javascript: void 0;">
+            <div class="time">19h00</div>
+            <div class="salle">GF</div>
+            <div class="cycle">ArteKino</div>
+            <div class="rem1">Avant-première. Séance présentée par Teresa Villaverde</div>
+            <ul>
+              <li class="film"><div class="title">Colo</div> <div class="director">Teresa Villaverde</div>, 2016</li>
+            </ul>
+          </a>
+          <hr class="short">
+          <a class="show" href="javascript: void 0;">
+            <div class="time">19h30</div>
+            <div class="salle">HL</div>
+            <div class="cycle">Max Ophuls</div>
+            <ul>
+              <li class="film"><div class="title">Les Désemparés</div> <div class="director">Max Ophuls</div>, 1949</li>
+            </ul>
+          </a>
+        </div>
+
+        <!-- Col 3 : à partir de 19h30 inclus -->
+        <div class="cell small-12 medium-4">
+          <a class="show" href="javascript: void 0;">
+            <div class="time">20h00</div>
+            <div class="salle">JE</div>
+            <div class="cycle">Fenêtre sur les collections</div>
+            <div class="showtitle">Burlesque : cinéma !</div>
+            <div class="rem1">Performance d'Hilde D'Haeyere. Accompagnement musical par Joël Grare</div>
+            <ul>
+            <li class="film short"><div class="title">Gribouille redevient Boireau</div> <div class="director">Anonyme</div></li>
+            <li class="film short"><div class="title">Les Débuts de Max au cinéma</div> <div class="director">Louis J. Gasnier, Max Linder</div></li>
+            <li class="film short"><div class="title">Un idiot qui se croit Max Linder</div> <div class="director">Roméo Bosetti</div></li>
+            <li class="film short"><div class="title">Mabel's Dramatic Career</div> <div class="director">Mack Sennett</div></li>
+            <li class="film short"><div class="title">Before the Public</div> <div class="director">Charles Parrott</div></li>
+            </ul>
+          </a>
+          <hr class="short">
+          <a class="show" href="javascript: void 0;">
+            <div class="time">21h30</div>
+            <div class="salle">HL</div>
+            <div class="cycle">Max Ophuls</div>
+            <ul>
+            <li class="film"><div class="title">La Ronde</div> <div class="director">Max Ophuls</div>, 1950</li>
+            </ul>
+          </a>
+          <hr class="short">
+          <a class="show hi" href="javascript: void 0;">
+            <div class="time">21h45</div>
+            <div class="salle">GF</div>
+            <div class="cycle">ArteKino</div>
+            <div class="rem1">Avant-première</div>
+            <ul>
+              <li class="film"><div class="title">Chevalier</div> <div class="director">Athina Rachel Tsangari</div>, 2016</li>
+            </ul>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

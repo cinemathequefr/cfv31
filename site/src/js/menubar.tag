@@ -58,7 +58,6 @@
   tag.searchSubmit = function (e) {
     tag.searchSetFocus();
     e.preventDefault();
-    console.log("Submit");
   }
 
   tag.searchSetFocus = function (e) {

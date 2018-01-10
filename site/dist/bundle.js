@@ -2850,6 +2850,7 @@ var riot$1 = extend({}, core, {
 });
 
 riot$1.tag2('app', '<menubar></menubar>', '', '', function(opts) {
+  console.log(riot$1.tags);
 });
 
 var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
@@ -4202,7 +4203,6 @@ riot$1.tag2('menubar', '<div class="menu-wrapper"> <div class="menu-container"> 
   tag$$1.searchSubmit = function (e) {
     tag$$1.searchSetFocus();
     e.preventDefault();
-    console.log("Submit");
   };
 
   tag$$1.searchSetFocus = function (e) {
@@ -4220,7 +4220,6 @@ var state = {
     selected: "musee"
   }
 };
-
 
 riot$1.mount("app", state);
 
