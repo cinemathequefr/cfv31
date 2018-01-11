@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflaer.com/ajax/libs/normalize/7.0.0/normalize.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+    <!-- <link rel="stylesheet" href="../../foundation-6.4.3.flex-grid-only.min.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
+    <script>WebFont.load({google:{families:["Quicksand:300,700", "Source+Sans+Pro:400,400italic,600,600italic,700,700italic"]}});</script>
+    <title>CFv31 Calendrier home 2</title>
+    <style>
+
+    body {
+      margin: 0; 
+      background-color: #eee;
+      font-family: Source Sans Pro, sans-serif; 
+    }
+
+    h2 {
+      font-family: Quicksand, sans-serif; font-weight: 700; text-transform: uppercase; font-size: 1.75rem; color: #333; text-align: center;
+      margin: 24px 0;
+    }
+
+    .home-calendar {
+      display: block; position: relative;
+      width: 100%;
+      margin: 48px auto;
+      background-color: #fff;
+      color: #444;
+      line-height: 1.375rem;
+    }
+
+
+    .home-calendar ul {
+      list-style-type: none;
+      padding: 0; margin: 0;
+    }
+
+    li {
+      line-height: 1.375rem;
+    }
+
+    a:link, a:hover, a:active, a:visited { color: #444; text-decoration: none; }
+
+    a.show {
+      position: relative; display: block;
+      padding: 12px 8px; margin: 0 0;
+      transition: 0.15s;
+      font-size: 1rem;
+    }
+    a.show:hover { background-color: #eee; }
+
+    .cell.medium-3:not(:last-child) {
+      border-right: solid 1px #ccc;
+    }
+
+    hr.short { width: 60px; margin: 4px auto; }
+
+    .grid { width: 1140px; padding: 0; margin: 0 auto; }
+    .grid .cell { margin: 0; padding: 4px; overflow: hidden; }
+
+    .activite { font-weight: 600; }
+    .time { display: inline-block; font-weight: 700; }
+    .salle { display: inline-block; font-size: 0.875rem; font-weight: 600; margin: 0 0 0 4px; border: solid 1px #666; padding: 0 4px; text-align: center; box-sizing: border-box;}
+    .cycle { display: block; text-transform: uppercase; font-size: 0.875rem; }
+    .title { display: inline-block; font-weight: 400; color: #a50; }
+    .rem1 { color: #666; font-size: 0.875rem; font-weight: 600; }
+    .rem2 { color: #c33; font-size: 0.875rem; font-weight: 600; }
+
+
+    </style>
+    <title>CFv31 : Grid</title>
+  </head>
+  <body>
+    <div class="home-calendar">
+
+      <div class="grid grid-x"><div class="cell small-12"><h2>Vendredi 8 décembre 2017</h2></div></div>
+        
+
+      <div class="grid grid-x" style="padding: 24px 0;">
+        <!-- Col 1 : jusqu'à 17h00 inclus -->
+        <div class="cell small-12 medium-3">
+          <a class="show" href="javascript: void 0;">
+            <div class="time">14h00</div><div class="salle">Salle HL</div>
+            <div class="cycle">Révisons nos classiques</div>
+            <div><span class="title">Les Amants de la nuit</span> Nicholas Ray, 1948</div>
+          </a>
+          <a class="show" href="javascript: void 0;">
+            <div class="time">14h30</div><div class="salle">Salle GF</div>
+            <div class="cycle">Le Conservatoire des techniques</div>
+            <div><span class="title">Les 10 ans du Conservatoire des techniques, trois anniversaires, hommage à deux pionniers : Émile Reynaud et Georges Demenÿ</span> Conférence de Sylvie Saerens et Laurent Mannoni</div>
+          </a>
+          <a class="show" href="javascript: void 0;">
+            <div class="time">17h00</div><div class="salle">Salle HL</div>
+            <div class="cycle">L'URSS des cinéastes</div>
+            <div class="rem2">En remplacement du film Le Chemin de la vie</div>
+
+            <div><span class="title">Femmes en révolte</span> Albert Hendelstein, 1935</div>
+          </a>
+        </div>
+
+        <!-- Col 2 : de 17h00 exclu à 19h30 exclu -->
+        <div class="cell small-12 medium-3">
+          <a class="show" href="javascript: void 0;">
+            <div class="time">18h30</div><div class="salle">Salle JE</div>
+            <div class="cycle">Fenêtre sur les collections</div>
+            <div class="rem1">Séance présentée par Céline Ruivo et Emmanuelle Berthault. Accompagnement musical de Joël Grare</div>
+            <div><span class="title">Burlesque&nbsp;: amour et animaux</span> (programme de courts métrages)</div>
+          </a>
+          <a class="show hi" href="javascript: void 0;">
+            <div class="time">19h00</div><div class="salle">Salle GF</div>
+            <div class="cycle">ArteKino</div>
+            <div class="rem1">Avant-première. Séance présentée par Teresa Villaverde</div>
+            <div><span class="title">Colo</span> Teresa Villaverde, 2016</div>
+          </a>
+          <a class="show" href="javascript: void 0;">
+            <div class="time">19h30</div><div class="salle">Salle HL</div>
+            <div class="cycle">Max Ophuls</div>
+            <div><span class="title">Les Désemparés</span> Max Ophuls, 1949</div>
+          </a>
+        </div>
+
+        <!-- Col 3 : à partir de 19h30 inclus -->
+        <div class="cell small-12 medium-3">
+          <a class="show" href="javascript: void 0;">
+            <div class="time">20h00</div><div class="salle">Salle JE</div>
+            <div class="cycle">Fenêtre sur les collections</div>
+            <div class="rem1">Performance d'Hilde D'Haeyere. Accompagnement musical par Joël Grare</div>
+            <div><span class="title">Burlesque : cinéma !</span></div>
+          </a>
+          <a class="show" href="javascript: void 0;">
+            <div class="time">21h30</div><div class="salle">Salle HL</div>
+            <div class="cycle">Max Ophuls</div>
+            <div><span class="title">La Ronde</span> Max Ophuls, 1950</div>
+            </ul>
+          </a>
+          <a class="show hi" href="javascript: void 0;">
+            <div class="time">21h45</div><div class="salle">Salle GF</div>
+            <div class="cycle">ArteKino</div>
+            <div class="rem1">Avant-première</div>
+            <div><span class="title">Chevalier</span> Athina Rachel Tsangari, 2016</div>
+            </ul>
+          </a>
+        </div>
+
+        <!-- Col 3 : à partir de 19h30 inclus -->
+        <div class="cell small-12 medium-3">
+          <a class="show" href="javascript: void 0;">
+            <div class="activite">Exposition Goscinny et le cinéma</div>
+            <div class="time">12h00-21h00</div>
+          </a>
+          <hr class="short">
+          <a class="show" href="javascript: void 0;">
+            <div class="activite">La Bibliothèque du film</div>
+            <div class="time">10h00-19h00</div>
+          </a>
+          <hr class="short">
+          <a class="show" href="javascript: void 0;">
+            <div class="activite">Musée de la Cinémathèque</div>
+            <div class="time">12h00-19h00</div>
+          </a>
+          <hr class="short">
+          <a class="show" href="javascript: void 0;">
+            <div class="activite">Librairie</div>
+            <div class="time">12h00-20h00</div>
+          </a>
+          <hr class="short">
+          <a class="show" href="javascript: void 0;">
+            <div class="activite">Café restaurant Les 400 coups</div>
+            <div class="time">11h00-20h30</div>
+          </a>
+
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </body>
+</html>
