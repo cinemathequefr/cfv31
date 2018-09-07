@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/normalize.min.css" rel="stylesheet"></link>
+    <link href="css/menu.css" rel="stylesheet"></link>
+    <link href="http://www.cinematheque.fr/static/apps/cinematheque_templates/css/standard.css?1528302646" media="all" rel="stylesheet" type="text/css"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/webfontloader.js"></script>
+    <script src="js/eager-navbar.js"></script>
+    <script>WebFont.load({google:{families:["Quicksand:300,400,700","Source+Sans+Pro:400,400italic,600,600italic"]}});</script>
+
+    <!-- Styles additionnels pour la page -->
+    <style>
+    .banner-full { height: calc(100vh - 120px); }
+    </style>
+
+    <title>Prototype CFv31 : Home</title>
+  </head>
+  <body class="page-home" style="position: relative;">
+
+    <div class="main">
+
+      <!-- MENU -->
+      <div class="menu-wrapper">
+        <div class="menu-container">
+          <a class="logocf" href="index.html">La Cinémathèque française</a>
+          <ul class="menu-root menu-top">
+            <li><a href="javascript: void 0;">Collections</a></li><li><a href="javascript: void 0;">Événements privés</a></li><li><a id="menu-pro" href="javascript: void 0;">Professionnels</a></li><li><a href="javascript: void 0;">Presse</a></li><li><a href="javascript: void 0;">Groupes</a></li>
+          </ul>
+          <ul class="menu-root menu-bottom">
+            <li><a href="index.html" id="menu-evenements">Événements</a></li><li><a href="javascript: void 0;">Exposition</a></li><li><a href="javascript: void 0;">Musée</a></li><li><a href="javascript: void 0;">Bibliothèque</a></li><li><a href="javascript: void 0;">Découvrir</a></li><li><a href="javascript: void 0;">Infos pratiques</a></li><li><a href="javascript: void 0;">Calendrier</a></li><li><a class="icon-search" href="javascript: void 0;"></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- END MENU -->
+
+
+
+<!-- NOVIUS -->      
+      <header>
+        <div class="banner-full" style="background-image:url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/leo-mccarey-2/cr,1600,1200-q,75-db5f18.jpg);">
+          <div class="row">
+            <div class="columns large-7 medium-7 hide-for-small">
+              <div class="title-content">
+                <span></span>
+                <h1><span><a href="cycle.html">Leo McCarey</a></span></h1><span></span>
+                <h2><span><a href="cycle.html">Du 29 août au 24 septembre 2018</a></span></h2><span></span>
+              </div>
+            </div>
+            <div class="columns large-5 medium-5">
+              <div class="calendar-small">
+                <div class="calendar-date">
+                  jeudi 6 septembre
+                </div>
+                <div class="scrollable ps-container" style="height: 451px;">
+                  <ul class="visit">
+                    <li>
+                      <a class="seance" href="http://www.cinematheque.fr/musee.html"><span class="time">12h-19h</span><span class="manif"><span class="title2">Musée de la Cinémathèque</span></span></a>
+                    </li>
+                    <li>
+                      <a class="seance" href="http://www.cinematheque.fr/bibliotheque.html"><span class="time">10h-19h</span><span class="manif"><span class="title2">La Bibliothèque du film</span></span></a>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li class="off">
+                      <a class="seance" href="seance/29942.html"><span class="time">14h30</span><span class="manif"><span class="title-sous-cycle">Quand le cinéma va au musée...</span><br>
+                      <span class="title">Nick Winter et le vol de la Joconde</span> <span class="details">Anonyme, 1911</span><br>
+                      <span class="title">Gervaise</span> <span class="details">René Clément, 1955</span></span></a>
+                    </li>
+                    <li>
+                      <a class="seance" href="seance/30016.html"><span class="time">19h00</span><span class="manif"><span class="title-sous-cycle">Leo McCarey</span><br>
+                      <span class="title">Leo McCarey&nbsp;: l'amour par terre. Conférence de Murielle Joudet</span></span></a>
+                    </li>
+                    <li>
+                      <a class="seance" href="seance/29943.html"><span class="time">19h30</span><span class="manif"><span class="title-sous-cycle">Quand le cinéma va au musée...</span><br>
+                      <span class="title">Bande à part</span> <span class="details">Jean-Luc Godard, 1964</span></span></a>
+                    </li>
+                    <li>
+                      <a class="seance" href="seance/30350.html"><span class="time">20h30</span><span class="manif"><span class="title-sous-cycle">Voyage au cœur du cinéma français des années 1940</span><br>
+                      <span class="title">Lettres d'amour</span> <span class="details">Claude Autant-Lara, 1942</span></span></a>
+                    </li>
+                    <li>
+                      <a class="seance" href="seance/29978.html"><span class="time">21h30</span><span class="manif"><span class="title-sous-cycle">Leo McCarey</span><br>
+                      <span class="title">Lune de miel mouvementée</span> <span class="details">Leo McCarey, 1942</span></span></a>
+                    </li>
+                    <li>
+                      <a class="seance" href="seance/29951.html"><span class="time">21h45</span><span class="manif"><span class="title-sous-cycle">Quand le cinéma va au musée...</span><br>
+                      <span class="title">Où es-tu allé en vacances ? Vacances intelligentes</span> <span class="details">Alberto Sordi, 1979</span></span></a>
+                    </li>
+                  </ul>
+                  <div class="ps-scrollbar-x-rail" style="display: none; width: 332.5px; left: 0px; bottom: 3px;">
+                    <div class="ps-scrollbar-x" style="left: 0px; width: 0px;"></div>
+                  </div>
+                  <div class="ps-scrollbar-y-rail" style="top: 0px; height: 451px; right: 3px;">
+                    <div class="ps-scrollbar-y" style="top: 0px; height: 0px;"></div>
+                  </div>
+                </div>
+                <div class="calendar-general-link">
+                  <a href="http://www.cinematheque.fr/calendrier.html#aujourdhui"><i class="fa fa-calendar-o"></i>CALENDRIER GÉNÉRAL</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chevron">
+            <a class="smooth" data-tracking="" data-tracking-action="nombre-clic" data-tracking-category="home" data-tracking-label="fleche-header" href="http://www.cinematheque.fr/#menu-principal"><!-- <i class="fa fa-angle-down"></i> --></a>
+          </div>
+        </div>
+      </header>
+
+
+
+  <div id="content">
+        
+
+
+                    <div id="expositions" class="cycles" data-magellan-destination="expositions">
+                <div class="row large">
+                    <div class="columns large-8 medium-12 small-12">
+                        <h1>Expositions et rétrospectives</h1>
+                    </div>
+                    <div class="columns large-4 medium-12 small-12">
+                        <a href="http://www.cinematheque.fr/programmation.html"
+                           class="right archives">
+                            <button class="white grey">› Historique de la programmation</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="row large">
+                    <ul class="large-block-grid-3 medium-block-grid-3 small-block-grid-1">
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                                  url(http://www.cinematheque.fr/cache/media/quand-le-cinema-va-au-musee/cr,530,300-q,75-35f03e.png)
+                                                  ">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/quand-le-cinema-va-au-musee/cr,530,300-q,75-35f03e.png"
+                                                 alt="Quand le cinéma va au musée...">
+                                                                                            <span class="type">
+                                                    <span>
+                                                        Rétrospective                                                    </span>
+                                                </span>
+                                                                                                                                </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            Quand le cinéma va au musée...                                        </h3>
+                                        <h4>
+                                                                                            Du 5 au 17 septembre 2018                                                                                    </h4>
+                                    </span>
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                                  url(http://www.cinematheque.fr/cache/media/shyamalan/cr,530,300-q,75-cdcf51.jpg)
+                                                  ">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/shyamalan/cr,530,300-q,75-cdcf51.jpg"
+                                                 alt="M. Night Shyamalan">
+                                                                                            <span class="type">
+                                                    <span>
+                                                        Rétrospective                                                    </span>
+                                                </span>
+                                                                                                                                </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            M. Night Shyamalan                                        </h3>
+                                        <h4>
+                                                                                            Du 10 au 16 septembre 2018                                                                                    </h4>
+                                    </span>
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                                  url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/leo-mccarey-2/cr,530,300-q,75-1332ad.jpg)
+                                                  ">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/leo-mccarey-2/cr,530,300-q,75-1332ad.jpg"
+                                                 alt="Leo McCarey">
+                                                                                            <span class="type">
+                                                    <span>
+                                                        Rétrospective                                                    </span>
+                                                </span>
+                                                                                                                                </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            Leo McCarey                                        </h3>
+                                        <h4>
+                                                                                            Du 29 août au 24 septembre 2018                                                                                    </h4>
+                                    </span>
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                                  url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/bandeau-jep-2018/cr,530,300-q,75-4a769a.jpg)
+                                                  ">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/bandeau-jep-2018/cr,530,300-q,75-4a769a.jpg"
+                                                 alt="Journées européennes du Patrimoine 2018">
+                                                                                                                                        <span class="a-venir">
+                                                    à venir                                                </span>
+                                                                                    </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            Journées européennes du Patrimoine 2018                                        </h3>
+                                        <h4>
+                                                                                            Du 15 au 16 septembre 2018                                                                                    </h4>
+                                    </span>
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                                  url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/bergman-2/cr,530,300-q,75-2509dd.jpg)
+                                                  ">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/bergman-2/cr,530,300-q,75-2509dd.jpg"
+                                                 alt="Ingmar Bergman">
+                                                                                            <span class="type">
+                                                    <span>
+                                                        Rétrospective                                                    </span>
+                                                </span>
+                                                                                                                                        <span class="a-venir">
+                                                    à venir                                                </span>
+                                                                                    </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            Ingmar Bergman                                        </h3>
+                                        <h4>
+                                                                                            Du 19 septembre au 11 novembre 2018                                                                                    </h4>
+                                    </span>
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                                  url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/bandeau-japonismes/cr,530,300-q,75-069186.jpg)
+                                                  ">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/bandeau-japonismes/cr,530,300-q,75-069186.jpg"
+                                                 alt="100 ans de cinéma japonais (1ère partie)">
+                                                                                            <span class="type">
+                                                    <span>
+                                                        Rétrospective                                                    </span>
+                                                </span>
+                                                                                                                                        <span class="a-venir">
+                                                    à venir                                                </span>
+                                                                                    </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            100 ans de cinéma japonais (1ère partie)                                        </h3>
+                                        <h4>
+                                                                                            Du 26 septembre au 22 octobre 2018                                                                                    </h4>
+                                    </span>
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                                  url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/bandeau-valeria-sarmiento/cr,530,300-q,75-0ed4aa.jpg)
+                                                  ">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/bandeau-valeria-sarmiento/cr,530,300-q,75-0ed4aa.jpg"
+                                                 alt="Valeria Sarmiento">
+                                                                                            <span class="type">
+                                                    <span>
+                                                        Rétrospective                                                    </span>
+                                                </span>
+                                                                                                                                        <span class="a-venir">
+                                                    à venir                                                </span>
+                                                                                    </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            Valeria Sarmiento                                        </h3>
+                                        <h4>
+                                                                                            Du 1 au 7 octobre 2018                                                                                    </h4>
+                                    </span>
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                                  url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/bandeau-sergio-leone-1/cr,530,300-q,75-0d587d.jpg)
+                                                  ">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/bandeau-sergio-leone-1/cr,530,300-q,75-0d587d.jpg"
+                                                 alt="Il était une fois Sergio Leone">
+                                                                                            <span class="type">
+                                                    <span>
+                                                        Exposition et rétrospective                                                    </span>
+                                                </span>
+                                                                                                                                        <span class="a-venir">
+                                                    à venir                                                </span>
+                                                                                    </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            Il était une fois Sergio Leone                                        </h3>
+                                        <h4>
+                                                                                            Du 10 octobre 2018 au 28 janvier 2019                                                                                    </h4>
+                                    </span>
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                                  url(http://www.cinematheque.fr/cache/media/bandeau-jane-fonda-barbarella/cr,530,300-q,75-f6a190.jpg)
+                                                  ">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/bandeau-jane-fonda-barbarella/cr,530,300-q,75-f6a190.jpg"
+                                                 alt="Jane Fonda">
+                                                                                            <span class="type">
+                                                    <span>
+                                                        Rétrospective                                                    </span>
+                                                </span>
+                                                                                                                                        <span class="a-venir">
+                                                    à venir                                                </span>
+                                                                                    </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            Jane Fonda                                        </h3>
+                                        <h4>
+                                                                                            Du 22 octobre au 5 novembre 2018                                                                                    </h4>
+                                    </span>
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                                  url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/bandeau-rappeneau/cr,530,300-q,75-d5f86b.jpg)
+                                                  ">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/bandeau-rappeneau/cr,530,300-q,75-d5f86b.jpg"
+                                                 alt="Jean-Paul Rappeneau">
+                                                                                            <span class="type">
+                                                    <span>
+                                                        Rétrospective                                                    </span>
+                                                </span>
+                                                                                                                                        <span class="a-venir">
+                                                    à venir                                                </span>
+                                                                                    </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            Jean-Paul Rappeneau                                        </h3>
+                                        <h4>
+                                                                                            Du 24 octobre au 3 novembre 2018                                                                                    </h4>
+                                    </span>
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                                  url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/bandeau-jean-renoir/cr,530,300-q,75-0d8cd2.jpg)
+                                                  ">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/bandeau-jean-renoir/cr,530,300-q,75-0d8cd2.jpg"
+                                                 alt="Jean Renoir">
+                                                                                            <span class="type">
+                                                    <span>
+                                                        Rétrospective                                                    </span>
+                                                </span>
+                                                                                                                                        <span class="a-venir">
+                                                    à venir                                                </span>
+                                                                                    </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            Jean Renoir                                        </h3>
+                                        <h4>
+                                                                                            Du 7 au 25 novembre 2018                                                                                    </h4>
+                                    </span>
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                                  url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/bandeau-youssef-chahine-adieu-bonaparte/cr,530,300-q,75-3661e2.jpg)
+                                                  ">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/bandeau-youssef-chahine-adieu-bonaparte/cr,530,300-q,75-3661e2.jpg"
+                                                 alt="Youssef Chahine">
+                                                                                            <span class="type">
+                                                    <span>
+                                                        Exposition et rétrospective                                                    </span>
+                                                </span>
+                                                                                                                                        <span class="a-venir">
+                                                    à venir                                                </span>
+                                                                                    </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            Youssef Chahine                                        </h3>
+                                        <h4>
+                                                                                            Du 14 novembre 2018 au 28 juillet 2019                                                                                    </h4>
+                                    </span>
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                                  url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/american-fringe-3-bandeau-rukus/cr,530,300-q,75-091104.jpg)
+                                                  ">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/american-fringe-3-bandeau-rukus/cr,530,300-q,75-091104.jpg"
+                                                 alt="American Fringe, saison 3">
+                                                                                            <span class="type">
+                                                    <span>
+                                                        Week-end                                                    </span>
+                                                </span>
+                                                                                                                                        <span class="a-venir">
+                                                    à venir                                                </span>
+                                                                                    </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            American Fringe, saison 3                                        </h3>
+                                        <h4>
+                                                                                            Du 16 au 18 novembre 2018                                                                                    </h4>
+                                    </span>
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                                  url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/bandeau-ennio-morricone/cr,530,300-q,75-54786c.jpg)
+                                                  ">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/bandeau-ennio-morricone/cr,530,300-q,75-54786c.jpg"
+                                                 alt="Ennio Morricone">
+                                                                                            <span class="type">
+                                                    <span>
+                                                        Rétrospective                                                    </span>
+                                                </span>
+                                                                                                                                        <span class="a-venir">
+                                                    à venir                                                </span>
+                                                                                    </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            Ennio Morricone                                        </h3>
+                                        <h4>
+                                                                                            Du 21 au 26 novembre 2018                                                                                    </h4>
+                                    </span>
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+            </div>
+        
+                    <div id="programmations" class="permanents" data-magellan-destination="programmations">
+                <div class="row large">
+                    <div class="columns large-9">
+                        <h1>Programmations régulières</h1>
+                    </div>
+                    <div class="columns large-3">
+                    </div>
+                </div>
+
+                <div class="row large">
+                    <ul class="large-block-grid-4 medium-block-grid-3 small-block-grid-2">
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                              url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/au-coeur-du-cin-ma-fran-ais-des-ann-es-1940/cr,389,219-q,75-6fbbb6.jpg)">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/au-coeur-du-cin-ma-fran-ais-des-ann-es-1940/cr,389,219-q,75-6fbbb6.jpg"
+                                                 alt="Voyage au cœur du cinéma français des années 1940">
+                                                                                    </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            Voyage au cœur du cinéma français des années 1940                                        </h3>
+                                    </span>
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                              url(http://www.cinematheque.fr/cache/media/ouverture-dilili-a-paris/cr,389,219-q,75-9d2ff2.jpg)">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/ouverture-dilili-a-paris/cr,389,219-q,75-9d2ff2.jpg"
+                                                 alt="Jeune public">
+                                                                                    </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            Jeune public                                        </h3>
+                                    </span>
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                              url(http://www.cinematheque.fr/cache/media/aujourdhui-le-cinema-bandeau-automne-2018/cr,389,219-q,75-e0f0e5.jpg)">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/aujourdhui-le-cinema-bandeau-automne-2018/cr,389,219-q,75-e0f0e5.jpg"
+                                                 alt="Aujourd'hui le cinéma">
+                                                                                    </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            Aujourd'hui le cinéma                                        </h3>
+                                    </span>
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                              url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/bandeau-bis-sept-oct-nov-2018/cr,389,219-q,75-f52dce.jpg)">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/bandeau-bis-sept-oct-nov-2018/cr,389,219-q,75-f52dce.jpg"
+                                                 alt="Cinéma bis">
+                                                                                    </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            Cinéma bis                                        </h3>
+                                    </span>
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                              url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/bandeau-revisons-nos-classiques-automne-2018/cr,389,219-q,75-22d75f.jpg)">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/bandeau-revisons-nos-classiques-automne-2018/cr,389,219-q,75-22d75f.jpg"
+                                                 alt="Révisons nos classiques">
+                                                                                    </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            Révisons nos classiques                                        </h3>
+                                    </span>
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                              url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/douchet/cr,389,219-q,75-603148.jpg)">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/douchet/cr,389,219-q,75-603148.jpg"
+                                                 alt="Ciné-club Jean Douchet">
+                                                                                    </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            Ciné-club Jean Douchet                                        </h3>
+                                    </span>
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                              url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/seance-speciale-sept2018/cr,389,219-q,75-406bf8.jpg)">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/seance-speciale-sept2018/cr,389,219-q,75-406bf8.jpg"
+                                                 alt="Séances spéciales">
+                                                                                    </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            Séances spéciales                                        </h3>
+                                    </span>
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                              url(http://www.cinematheque.fr/cache/media/programmation/avant-garde-automne-2018/cr,389,219-q,75-992051.jpg)">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/programmation/avant-garde-automne-2018/cr,389,219-q,75-992051.jpg"
+                                                 alt="Cinéma d'avant-garde">
+                                                                                    </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            Cinéma d'avant-garde                                        </h3>
+                                    </span>
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                              url(http://www.cinematheque.fr/cache/media/bellissima/cr,389,219-q,75-a9d070.jpg)">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/bellissima/cr,389,219-q,75-a9d070.jpg"
+                                                 alt="Le Conservatoire des techniques">
+                                                                                    </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            Le Conservatoire des techniques                                        </h3>
+                                    </span>
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                              url(http://www.cinematheque.fr/cache/media/contes-de-juillet/cr,389,219-q,75-1ca924.jpg)">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/contes-de-juillet/cr,389,219-q,75-1ca924.jpg"
+                                                 alt="L'Autre ciné-club">
+                                                                                    </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            L'Autre ciné-club                                        </h3>
+                                    </span>
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                              url(http://www.cinematheque.fr/cache/media/bandeau-parlons-cinema-realit/cr,389,219-q,75-d6e984.jpg)">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/bandeau-parlons-cinema-realit/cr,389,219-q,75-d6e984.jpg"
+                                                 alt="Parlons cinéma">
+                                                                                    </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            Parlons cinéma                                        </h3>
+                                    </span>
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                              url(http://www.cinematheque.fr/cache/media/formation-adultes-illustration/cr,389,219-q,75-b49635.jpg)">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/formation-adultes-illustration/cr,389,219-q,75-b49635.jpg"
+                                                 alt="Stages et ateliers">
+                                                                                    </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            Stages et ateliers                                        </h3>
+                                    </span>
+                                </a>
+                            </li>
+                                                                                                            <li>
+                                <a href="cycle.html" class="cycle a-venir">
+                                    <span class="image"
+                                          style="background-image:
+                                              url(http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/bandeau-fenetres-septembre-2018/cr,389,219-q,75-fe27cd.jpg)">
+                                        <span class="wrapper">
+                                            <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/programmation/bandeau-1800x1000/bandeau-fenetres-septembre-2018/cr,389,219-q,75-fe27cd.jpg"
+                                                 alt="Fenêtre sur les collections">
+                                                                                    </span>
+                                    </span>
+                                    <span class="content">
+                                        <h3>
+                                            Fenêtre sur les collections                                        </h3>
+                                    </span>
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+            </div>
+        
+        
+            <div id="decouvrir" class="centre-ressources" data-magellan-destination="decouvrir">
+
+                <div class="row large">
+                    <div class="columns large-9">
+                        <h1>Découvrir</h1>
+                    </div>
+                    <div class="columns large-3">
+                    </div>
+                </div>
+
+                
+                    <div class="row large">
+                        <div class="columns large-4 no-padding-right">
+                            <div class="mise-en-avant">
+                                <div class="row">
+                                    <div class="columns large-12 medium-6 small-6">
+                                                                                <img data-qazy="true" src="http://www.cinematheque.fr/cache/media/mise-en-avant-decouvrir-de-palma/s,500-q,75-e4d072.jpg"
+                                             alt="Master Class, rencontres, conférences..."/>
+                                    </div>
+                                    <div class="columns large-12 medium-6 small-6">
+                                        <div class="text">
+                                                                                            <h3>Master Class, rencontres, conférences...</h3>
+                                                                                                                                            <div class="chapeau">
+                                                    Brian De Palma, Aurore Clément, Alain Chabat, Howard Shore. Caroline Champetier, Wim Wenders, Malcolm McDowell, William Klein. Jane Birkin, Claire Denis, Darius Khondji. Hou Hsiao-hsien, Francis Ford Coppola, Werner Herzog, Isabelle Huppert...
+Plus de 200 Master Class, entretiens, dialogues, avec des cinéastes, des techniciens, des comédiens, à découvrir sur notre site.                                                </div>
+                                                                                                <div class="tags">
+                                                    <a href="http://www.cinematheque.fr/decouvrir/t-24.html"
+                                                       class="tag tagpersonnes mea">
+                                                        Rencontres                                                    </a>
+                                                </div>
+                                                                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns large-8">
+                            <div class="row">
+                                <div class="items">
+                                    <ul class="large-block-grid-4 medium-block-grid-3 small-block-grid-2">
+                                                                                    <li>
+                                                <div class="item">
+    <a href="http://www.cinematheque.fr/objet/1282.html">
+        <div class="thumb"  style="background-image:url('http://www.cinematheque.fr/cache/media/objets-des-collections/affiche-americaine-de-lextravagant-mr-ruggles-par-david-lance-goines/cr,240,180-q,75-dc9b7a.jpg')">
+            <i class="fa fa-camera"></i>
+        </div>
+        <div class="text">
+            <span>Affiche américaine de «&nbsp;L'Extravagant Mr Ruggles&nbsp;» («&nbsp;Ruggles of Red Gap&nbsp;», Leo McCarey, 1935) par David Lance Goine</span>
+                            <span class="date-publication">(5 septembre 2018)</span>
+                    </div>
+    </a>
+</div>                                            </li>
+                                                                                        <li>
+                                                <div class="item">
+    <a href="http://www.cinematheque.fr/video/1281.html">
+        <div class="thumb"  style="background-image:url('http://www.cinematheque.fr/cache/media/miniatures-videos/1043-723467630_640/cr,240,180-q,75-060204.jpg')">
+            <i class="fa fa-film"></i>
+        </div>
+        <div class="text">
+            <span>Ingmar Bergman, obsessions</span>
+                            <span class="date-publication">(4 septembre 2018)</span>
+                    </div>
+    </a>
+</div>                                            </li>
+                                                                                        <li>
+                                                <div class="item">
+    <a href="http://www.cinematheque.fr/article/1279.html">
+        <div class="thumb"  style="background-image:url('http://www.cinematheque.fr/cache/media/articles/001-bachs-1979/cr,240,180-q,75-d3d32e.jpg')">
+            <i class="fa fa-quote-left"></i>
+        </div>
+        <div class="text">
+            <span>J'étais un affichiste cubain</span>
+                            <span class="date-publication">(30 août 2018)</span>
+                    </div>
+    </a>
+</div>                                            </li>
+                                                                                        <li>
+                                                <div class="item">
+    <a href="http://www.cinematheque.fr/article/1278.html">
+        <div class="thumb"  style="background-image:url('http://www.cinematheque.fr/cache/media/bergman-mode-d-emploi/cr,240,180-q,75-000d12.jpg')">
+            <i class="fa fa-quote-left"></i>
+        </div>
+        <div class="text">
+            <span>Ingmar Bergman, mode d'emploi</span>
+                            <span class="date-publication">(29 août 2018)</span>
+                    </div>
+    </a>
+</div>                                            </li>
+                                                                                        <li>
+                                                <div class="item">
+    <a href="http://www.cinematheque.fr/article/1277.html">
+        <div class="thumb"  style="background-image:url('http://www.cinematheque.fr/cache/media/articles/accueils-presse/il-etait-une-fois-en-amerique-revue-de-presse/cr,240,180-q,75-533ae3.jpg')">
+            <i class="fa fa-quote-left"></i>
+        </div>
+        <div class="text">
+            <span>Revue de presse de «&nbsp;Il était une fois en Amérique&nbsp;» (Sergio Leone, 1982)</span>
+                            <span class="date-publication">(27 août 2018)</span>
+                    </div>
+    </a>
+</div>                                            </li>
+                                                                                        <li>
+                                                <div class="item">
+    <a href="http://www.cinematheque.fr/video/1276.html">
+        <div class="thumb"  style="background-image:url('http://www.cinematheque.fr/cache/media/miniatures-videos/1042-720797646_640/cr,240,180-q,75-de0325.jpg')">
+            <i class="fa fa-film"></i>
+        </div>
+        <div class="text">
+            <span>Tourner «&nbsp;Pickpocket&nbsp;», travailler avec Bresson. Dialogue avec Marika Green</span>
+                            <span class="date-publication">(21 août 2018)</span>
+                    </div>
+    </a>
+</div>                                            </li>
+                                                                                        <li>
+                                                <div class="item">
+    <a href="http://www.cinematheque.fr/video/1275.html">
+        <div class="thumb"  style="background-image:url('http://www.cinematheque.fr/cache/media/miniatures-videos/1038-717692567_640/cr,240,180-q,75-833ddc.jpg')">
+            <i class="fa fa-film"></i>
+        </div>
+        <div class="text">
+            <span>Master class de Wim Wenders</span>
+                            <span class="date-publication">(6 août 2018)</span>
+                    </div>
+    </a>
+</div>                                            </li>
+                                                                                        <li>
+                                                <div class="item">
+    <a href="http://www.cinematheque.fr/video/1274.html">
+        <div class="thumb"  style="background-image:url('http://www.cinematheque.fr/cache/media/miniatures-videos/1037-717676225_640/cr,240,180-q,75-4e8d7a.jpg')">
+            <i class="fa fa-film"></i>
+        </div>
+        <div class="text">
+            <span>Master class de Malcolm McDowell</span>
+                            <span class="date-publication">(6 août 2018)</span>
+                    </div>
+    </a>
+</div>                                            </li>
+                                                                                </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                
+            </div>
+
+        
+        <div class="mecenes">
+            <div class="row">
+                <div class="columns large-3 medium-3">
+                    <p>&nbsp;&nbsp;<br>&nbsp;&nbsp;</p>
+                    <img src="http://www.cinematheque.fr/static/apps/cinematheque_templates/img/mecenes/01_ministere_culture.png"
+                         alt="République Française">
+                    <img src="http://www.cinematheque.fr/static/apps/cinematheque_templates/img/mecenes/02_cnc.png" alt="CNC">
+                </div>
+                <div class="columns large-5 medium-5">
+                    <p>Grands mécènes<br>de la cinémathèque française</p>
+                    <img src="http://www.cinematheque.fr/static/apps/cinematheque_templates/img/mecenes/03_neuflize_obc.png" alt="Neuflize OBC">
+                    <img src="http://www.cinematheque.fr/static/apps/cinematheque_templates/img/mecenes/04_fondation_gan.png" alt="Fondation Gan">
+                    <img src="http://www.cinematheque.fr/static/apps/cinematheque_templates/img/mecenes/05_vivendi.png" alt="Vivendi">
+                    <img src="http://www.cinematheque.fr/static/apps/cinematheque_templates/img/mecenes/06_pathe.png" alt="Pathé">
+                </div>
+                <div class="columns large-4 medium-4">
+                    <p>Amis<br>de la cinémathèque française</p>
+                    <img src="http://www.cinematheque.fr/static/apps/cinematheque_templates/img/mecenes/07_agnes_b.png" alt="Agnès B">
+                    <img src="http://www.cinematheque.fr/static/apps/cinematheque_templates/img/mecenes/08_betc.png" alt="BETC">
+                    <img src="http://www.cinematheque.fr/static/apps/cinematheque_templates/img/mecenes/09_cohen_film_collection.png" alt="Cohen Foundation">
+                    <img src="http://www.cinematheque.fr/static/apps/cinematheque_templates/img/mecenes/10_gaumont.png" alt="Gaumont">
+                </div>
+            </div>
+        </div>
+
+    </div>
+        <footer>
+            <div class="row">
+                <div class="large-3 medium-5 columns">
+                            <h2>La cinémathèque française</h2>
+                            <p>51 Rue de Bercy, 75012 Paris</p>
+                            <p>M° Bercy Lignes <span class="pastille metro purple">14</span> <span class="pastille metro green">6</span></p>
+                </div>
+                <div class="large-9 medium-7 columns">
+                    <div class="row">
+                        <div class="columns large-5">
+                            <div class="socials">
+    <a class="facebook icon" href="https://www.facebook.com/cinemathequefr" target="_blank">
+        <i class="icon-facebook"></i>
+    </a>
+    <a class="twitter icon" href="https://twitter.com/cinemathequefr" target="_blank">
+        <i class="icon-twitter"></i>
+    </a>
+    <a class="tumblr icon" href="http://cinemathequefr.tumblr.com/" target="_blank">
+        <i class="icon-tumblr"></i>
+    </a>
+    <a class="vimeo icon" href="https://vimeo.com/cinemathequefr" target="_blank">
+        <i class="icon-vimeo"></i>
+    </a>
+    <a class="instagram icon" href="https://instagram.com/cinemathequefr" target="_blank">
+        <i class="icon-instagram"></i>
+    </a>
+</div>                        </div>
+                        <div class="columns large-7">
+                                                            <p><a class="newsletter" target="_blank" href="http://cinematheque-crm-public.digitick.org/web/template/index/cinematheque/1513a3d5-6d83-ef5c-ea28-565f1e74f4bc">Abonnez-vous &agrave; nos newsletters</a></p>
+                                                    </div>
+                    </div>
+                                        <ul>
+                                                    <li>
+                                <a href="http://www.cinematheque.fr/informations-institutionnelles.html">Informations institutionnelles</a>                            </li>
+                                                    <li>
+                                <a href="http://www.cinematheque.fr/mentions-legales.html">Mentions l&eacute;gales</a>                            </li>
+                                            </ul>
+                                    </div>
+            </div>
+        </footer>
+<!-- END NOVIUS -->
+
+
+
+
+
+
+
+
+
+
+      
+    </div>
+    <script src="js/menu.js"></script>
+  </body>
+</html>
